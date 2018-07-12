@@ -10,7 +10,7 @@ export const getFoods = () => {
             .get('foods/')
             .then(response => {
                 dispatch({ 
-                    type: actionTypes.GET_FOODS,
+                    type: actionTypes.GET_FOODS.SUCCESS,
                     foods: response.data
                 });
             }).catch(error => {
@@ -56,6 +56,14 @@ export const register = user => {
             });
     }
 };
+
+export const showLoginModal = dispatch => {
+    return { type: actionTypes.LOGIN.SHOW_MODAL };
+}
+
+export const hideLoginModal = dispatch => {
+    return { type: actionTypes.LOGIN.HIDE_MODAL};
+}
 
 export const login = user => {
     return dispatch => {

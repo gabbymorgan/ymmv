@@ -1,9 +1,9 @@
 import React, { Component } from "react";
+import { Row } from 'reactstrap';
 
-class Report extends Component {
-  render() {
-    return <div />;
-  }
+export default props => {
+    return (
+      <Row>
+      </Row>
+    )
 }
-
-export default Report;

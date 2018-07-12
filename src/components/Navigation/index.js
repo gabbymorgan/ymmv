@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import {
   Collapse,
   Navbar,
@@ -11,8 +12,10 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
+import SearchBar from '../SearchBar';
+import { showLoginModal } from '../../actions';
 
-export default class Navigation extends React.Component {
+class Navigation extends React.Component {
   constructor(props) {
     super(props);
 
@@ -30,30 +33,28 @@ export default class Navigation extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <NavbarBrand href="/">ymmv</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+            
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                {/*placeholder because I have no idea what else to put here*/}
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Options
+                  My Profile
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Option 1
+                    Register
                   </DropdownItem>
-                  <DropdownItem>
-                    Option 2
+                  <DropdownItem onClick={() => this.props.showLoginModal()}>
+                    Sign In
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    Reset
+                    Sign Out
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
@@ -64,3 +65,5 @@ export default class Navigation extends React.Component {
     );
   }
 }
+
+export default connect(null, { showLoginModal })(Navigation);

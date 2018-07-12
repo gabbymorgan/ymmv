@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import Search from "../../components/Search/Search";
+import Search from "../../components/SearchBar";
+import Login from "../../components/Login";
+import Register from "../../components/Register";
 import FeedContainer from "../../containers/FeedContainer";
 
 class Landing extends Component {
@@ -8,6 +10,8 @@ class Landing extends Component {
       <div>
         <Search />
         <FeedContainer />
+        <Login />
+        <Register />
       </div>
     );
   }
