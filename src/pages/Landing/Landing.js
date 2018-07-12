@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import Search from '../../components/Search/Search';
+import FeedContainer from '../../containers/FeedContainer/FeedContainer'
 
 class Landing extends Component {
     render() {
         return (
             <div>
-                
+                <Search />
+                <FeedContainer />
             </div>
         );
     }

@@ -5,4 +5,4 @@ import reportsReducer from './reports';
 import sessionReducer from './session';
 import usersReducer from './users';
 
-export default rootReducer = combineReducers({ foodsReducer, reportsReducer, sessionReducer, usersReducer });
+export default combineReducers({ foodsReducer, reportsReducer, sessionReducer, usersReducer });
