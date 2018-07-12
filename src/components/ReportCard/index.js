@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-class Profile extends Component {
+class Report extends Component {
   render() {
     return <div />;
   }
 }
 
-export default Profile;
+export default Report;
