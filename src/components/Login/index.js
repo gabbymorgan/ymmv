@@ -76,7 +76,7 @@ class Login extends React.Component {
               </Button>
             </Form>
             <Modal isOpen={this.props.loginSuccess || this.props.loginFailed}>
-              <ModalHeader>{this.props.loginSuccess === true ? 'Login failed.' : 'Login successful!'}</ModalHeader>
+              <ModalHeader>{this.props.loginSuccess === true ? 'Login Successful' : 'Login failed.'}</ModalHeader>
               <ModalBody> {
                 this.props.loginSuccess === true
                 ? 'Good to see you again!'

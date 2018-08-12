@@ -41,6 +41,14 @@ export const getReports = () => {
     };
 };
 
+export const showRegisterModal = dispatch => {
+    return { type: actionTypes.REGISTER.SHOW_MODAL };
+}
+
+export const hideRegisterModal = dispatch => {
+    return { type: actionTypes.REGISTER.HIDE_MODAL};
+}
+
 export const register = user => {
     return dispatch => {
         dispatch({ type: actionTypes.REGISTER.IN_PROGRESS });

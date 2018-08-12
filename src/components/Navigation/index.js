@@ -13,7 +13,7 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 import SearchBar from '../SearchBar';
-import { showLoginModal } from '../../actions';
+import { showLoginModal, showRegisterModal } from '../../actions';
 
 class Navigation extends React.Component {
   constructor(props) {
@@ -46,7 +46,7 @@ class Navigation extends React.Component {
                   My Profile
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>
+                  <DropdownItem onClick={() => this.props.showRegisterModal()}>
                     Register
                   </DropdownItem>
                   <DropdownItem onClick={() => this.props.showLoginModal()}>
@@ -66,4 +66,4 @@ class Navigation extends React.Component {
   }
 }
 
-export default connect(null, { showLoginModal })(Navigation);
+export default connect(null, { showLoginModal, showRegisterModal })(Navigation);
