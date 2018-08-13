@@ -7,6 +7,7 @@ const UserSchema = new mongoose.Schema({
     summary: { type: String, maxlength: 256 },
     sensitivities: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Sensitivity' }],
     password: { type: String, minlength: 8 },
+    signUpDate: { type: Date, default: Date.now() },
 });
 
 UserSchema.pre('save', function hashPassword(next) {

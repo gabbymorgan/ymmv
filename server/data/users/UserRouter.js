@@ -1,26 +1,18 @@
 const express = require('express');
 const passport = require('passport');
-const jwt = require('jsonwebtoken');
 
-const secret = process.env.SECRET_KEY;
 const User = require('../employer/employerModel');
 
-const EXPIRATION = 1000 * 60 * 60 * 12;
 const router = express.Router();
 
 router
   .post('/register', (req, res) => {
     const details = req.body;
-    const user = new User({ ...details })
-    user
+    const newUser = new User({ ...details })
+    newUser
       .save()
-      .then((profile) => {
-        const payload = {
-          exp: Date.now() + EXPIRATION,
-          sub: user._id,
-        };
-        const token = jwt.sign(payload, secret);
-        return res.status(200).json({ profile, token });
+      .then((user) => {
+        res.status(200).json({ user })
       })
       .catch((err) => {
         res.status(500).json({ message: err.message });
@@ -40,18 +32,10 @@ router
             if (!passwordIsValid) {
               return res.status(401).json({ message: 'Bad credentials.' });
             }
-            const payload = {
-              exp: Date.now() + EXPIRATION,
-              sub: user._id,
-            };
-            const token = jwt.sign(payload, secret);
-            return res.json({ user, token });
-          })
-          .catch(err => res.status(500).json(err));
-      })
-      .catch(err => res.status(500).json(err));
-  })
-  .get('/profile', passport.authenticate('bearer', { session: false }), (req, res) => {
+            res.status(200).json({ user })
+          }).catch(err => res.status(500).json(err));
+      }).catch(err => res.status(500).json(err));
+  }).get('/profile', passport.authenticate('bearer', { session: false }), (req, res) => {
     const { user } = req;
     res.status(200).json({ user });
   });
