@@ -55,7 +55,9 @@ export const register = user => {
         return axios
             .post('users/register/', user)
             .then(response => {
-                dispatch({ type: actionTypes.REGISTER.SUCCESS });
+                const { user, token } = response.data;
+                localStorage.setItem({ token });
+                dispatch({ type: actionTypes.REGISTER.SUCCESS, user });
             }).catch(error => {
                 dispatch({
                     type: actionTypes.REGISTER.ERROR,
