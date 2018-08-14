@@ -1,7 +1,8 @@
 const express = require('express');
 const passport = require('passport');
+const uuid = require('uuid/v4');
 
-const User = require('../employer/employerModel');
+const User = require('./UserModel');
 
 const router = express.Router();
 
@@ -38,5 +39,10 @@ router
   }).get('/profile', passport.authenticate('bearer', { session: false }), (req, res) => {
     const { user } = req;
     res.status(200).json({ user });
-  });
+  })
+  .get('/', (req, res) => {
+    res.status(200).json({ uniqueString: uuid() })
+  })
   
+
+module.exports = router;
