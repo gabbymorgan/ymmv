@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-
-import foods from './foods';
+import products from './products';
 import reports from './reports';
-import session from './session';
-import users from './users';
+import user from './user';
 
-export default combineReducers({ foods, reports, session, users });
+export default combineReducers({
+  products,
+  reports,
+  user,
+})

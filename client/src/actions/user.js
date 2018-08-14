@@ -1,3 +1,4 @@
+
 import axios from 'axios';
 import actionTypes from '../constants/actionTypes';
 
@@ -55,9 +56,7 @@ export const register = user => {
         return axios
             .post('users/register/', user)
             .then(response => {
-                const { user, token } = response.data;
-                localStorage.setItem({ token });
-                dispatch({ type: actionTypes.REGISTER.SUCCESS, user });
+                dispatch({ type: actionTypes.REGISTER.SUCCESS });
             }).catch(error => {
                 dispatch({
                     type: actionTypes.REGISTER.ERROR,
