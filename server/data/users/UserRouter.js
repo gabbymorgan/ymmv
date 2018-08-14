@@ -1,19 +1,29 @@
 const express = require('express');
 const passport = require('passport');
-const uuid = require('uuid/v4');
 
 const User = require('./UserModel');
 
 const router = express.Router();
 
+passport.serializeUser(function (user, done) {
+  done(null, user._id);
+});
+
+passport.deserializeUser(function (user, done) {
+  //If using Mongoose with MongoDB; if other you will need JS specific to that schema
+  User.findById(id, function (err, user) {
+      done(err, user);
+  });
+});
+
 router
   .post('/register', (req, res) => {
     const details = req.body;
-    const newUser = new User({ ...details })
+    const newUser = new User({ ...details });
     newUser
       .save()
       .then((user) => {
-        res.status(200).json({ user })
+        res.status(200).json(user);
       })
       .catch((err) => {
         res.status(500).json({ message: err.message });
@@ -21,7 +31,7 @@ router
   })
   .post('/login', (req, res) => {
     const { email, password } = req.body;
-    user.findOne({ email })
+    User.findOne({ email })
       // check if password matches
       .then((user) => {
         if (!user) {
@@ -33,15 +43,26 @@ router
             if (!passwordIsValid) {
               return res.status(401).json({ message: 'Bad credentials.' });
             }
-            res.status(200).json({ user })
+            req.session.userId = user._id;
+            res.status(200).json(user);
           }).catch(err => res.status(500).json(err));
       }).catch(err => res.status(500).json(err));
-  }).get('/profile', passport.authenticate('bearer', { session: false }), (req, res) => {
-    const { user } = req;
-    res.status(200).json({ user });
+  })
+  .get('/profile', (req, res) => {
+    const { userId } = req.session;
+    User
+      .findById(userId)
+      .then(user => {
+        if (!user) {
+          res.status(401).json({ message: "Unauthorized." });
+        }
+        res.status(200).json(user);
+      }).catch(err => {
+        res.status(500).json(err);
+      })
   })
   .get('/', (req, res) => {
-    res.status(200).json({ uniqueString: uuid() })
+    res.status(200).json({ message: "At least this part is working!" })
   })
   
 

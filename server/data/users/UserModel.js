@@ -8,23 +8,21 @@ const UserSchema = new mongoose.Schema({
     summary: { type: String, maxlength: 256 },
     sensitivities: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Sensitivity' }],
     password: { type: String, minlength: 8, required: true },
-    signUpDate: { type: Date, default: Date.now() },
+    signUpDate: { type: Date, default: Date.now },
 });
 
 UserSchema.pre('save', function hashPassword(next) {
-    bcrypt.hash(this.password, 13, (err, hash) => {
-      if (err) {
-        return next(err);
-      }
-      this.password = hash;
-      return next();
-    });
+  bcrypt.hash(this.password, 10, (err, hash) => {
+    if (err) {
+      return next(err);
+    }
+    this.password = hash;
+    return next();
   });
+});
   
-  UserSchema.methods.validify = function (passwordGuess) {
-    return bcrypt.compare(passwordGuess, this.password);
-  };
-  
-  module.exports = mongoose.model('User', UserSchema);
-
+UserSchema.methods.validify = function (passwordGuess) {
+  return bcrypt.compare(passwordGuess, this.password);
+};
+ 
 module.exports = mongoose.model('User', UserSchema);

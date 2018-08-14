@@ -5,19 +5,29 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const passport = require('passport');
 const session = require('express-session');
-const uuid = require('uuid/v4');
+const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
 
 // local files
 const UserRouter = require('./data/users/UserRouter');
 
 const server = express();
+
 const dbUrl = process.env.NODE_ENV === 'production'
   // need new DB URL for project
   ? ``
   : 'mongodb://localhost:27017/ymmv';
+
+mongoose
+  .connect(dbUrl)
+  .then(() => {
+    console.log('\n=== Connected to MongoDB ===\n');
+  })
+  .catch(err => console.log('database conection failed', err));
+
 const originUrl = process.env.NODE_ENV === 'production'
   ? 'https://ymmv-mern.herokuapp.com' : 'http://localhost:3000';
+
 const corsOptions = {
   origin: (originUrl),
   credentials: true,
@@ -26,7 +36,7 @@ const corsOptions = {
 };
 
 server.use(session({
-  store: new MongoStore({ url: dbUrl }),
+  store: new MongoStore({ mongooseConnection: mongoose.connection }),
   secret: process.env.SECRET,
   resave: false,
   saveUninitialized: true,
