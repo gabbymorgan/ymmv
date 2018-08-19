@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import { Row, Col } from 'reactstrap';
 
-import { SearchContainer, NavContainer } from './';
+import { Search } from '../containers';
 
 class Main extends Component {
   render() {
     return (
-      <div>
-        
-      </div>
+      <Row>
+        <Search/>
+      </Row>
+
     );
   }
 }

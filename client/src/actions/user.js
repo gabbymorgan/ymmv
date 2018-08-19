@@ -23,7 +23,8 @@ export const login = (email, username, password) => (dispatch) => {
   return axios
     .post('users/login/', { email, username, password })
     .then(response => {
-      dispatch({ type: actionTypes.LOGIN.SUCCESS });
+      const profile = response.data;
+      dispatch({ type: actionTypes.LOGIN.SUCCESS, profile });
     }).catch(error => {
       dispatch({
         type: actionTypes.LOGIN.ERROR,
