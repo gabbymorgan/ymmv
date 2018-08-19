@@ -4,10 +4,10 @@ import { actionTypes } from '../constants';
 
 axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 
-export const register = user => (dispatch) => {
+export const register = (email, username, password) => (dispatch) => {
   dispatch({ type: actionTypes.REGISTER.IN_PROGRESS });
   return axios
-    .post('users/register/', user)
+    .post('users/register/', { email, username, password })
     .then(response => {
       dispatch({ type: actionTypes.REGISTER.SUCCESS });
     }).catch(error => {

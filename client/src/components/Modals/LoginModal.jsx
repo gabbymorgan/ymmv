@@ -12,20 +12,26 @@ class RegisterModal extends Component {
   }
 
   handleChange({ target }) {
-    const { value } = target;
+    const { value, name } = target;
     let theChosenOne = 'username';
-    let theNotChosenOne = 'email';
+    let notTheChosenOne = 'email';
 
     // checking for email vs username
-    if (value.match(/.*@.*\..*/)) {
-      theChosenOne = 'email';
-      theNotChosenOne = 'username';
+    if (name === 'emailOrUsername') {
+      if (value.match(/.*@.*\..*/)) {
+        theChosenOne = 'email';
+        notTheChosenOne = 'username';
+      }
+      this.setState({
+        [theChosenOne]: value,
+        [notTheChosenOne]: null,
+      })   
     }
-
-    this.setState({
-      [theChosenOne]: value,
-      [theNotChosenOne]: null,
-    });
+    else {
+      this.setState({
+        [name]: value,
+      });      
+    }
   }
 
   handleSubmit() {

@@ -41,6 +41,8 @@ server.use(session({
   resave: false,
   saveUninitialized: true,
   httpOnly: true,
+  secure: true,
+  sameSite: 'strict',
 }));
 server.use(morgan());
 server.use(express.json());

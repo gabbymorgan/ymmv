@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const UserSchema = new mongoose.Schema({
-    firstName: { type: String, required: true, maxlength: 64 },
-    lastName: { type: String, required: true, maxlength: 64 },
+    firstName: { type: String, maxlength: 64 },
+    lastName: { type: String, maxlength: 64 },
     email: { type: String, required: true },
-    summary: { type: String, maxlength: 256 },
+    description: { type: String, maxlength: 256 },
     sensitivities: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Sensitivity' }],
     password: { type: String, minlength: 8, required: true },
     signUpDate: { type: Date, default: Date.now },
