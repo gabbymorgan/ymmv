@@ -7,6 +7,6 @@ export const showSessionModal = () => dispatch => {
   dispatch({ type: actionTypes.SHOW_SESSION_MODAL });
 }
 
-export const hideSessioModal = () => dispatch => {
+export const hideSessionModal = () => dispatch => {
   dispatch({ type: actionTypes.HIDE_SESSION_MODAL });
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import SearchContainer from '../containers';
+import { SearchContainer, NavContainer } from './';
 
 class Main extends Component {
   render() {
