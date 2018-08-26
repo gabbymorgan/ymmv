@@ -10,6 +10,7 @@ const MongoStore = require('connect-mongo')(session);
 
 // local files
 const UserRouter = require('./data/users/UserRouter');
+const ProductRouter = require('./data/products/ProductRouter');
 
 const server = express();
 
@@ -54,6 +55,7 @@ server.use(passport.session());
 
 // routes begin
 server.use('/api/users', UserRouter);
+server.use('/api/products', ProductRouter);
 // routes end
 
 module.exports = server;

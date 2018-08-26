@@ -9,6 +9,7 @@ import {
   InputGroup as BSInputGroup,
   Form as BSForm,
   Label as BSLabel,
+  Card as BSCard,
 } from 'reactstrap';
 
 import { colors } from '../constants/theme';
@@ -52,4 +53,8 @@ export const InputGroup = styled(BSInputGroup)`
 
 export const Label = styled(BSLabel)`
   margin: 1rem 0 0 0;
+`;
+
+export const Card = styled(BSCard)`
+  width: 50%;
 `;

@@ -4,18 +4,18 @@ import { actionTypes } from '../constants';
 
 axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 
-export const searchProducts = (query) => (dispatch) => {
-  dispatch({ type: actionTypes.GET_PRODUCTS.IN_PROGRESS });
+export const searchProducts = (queryType, string) => (dispatch) => {
+  dispatch({ type: actionTypes.SEARCH_PRODUCTS.IN_PROGRESS });
   return axios
-    .get(`foods?query=${query}`)
+    .get(`products?queryType=${queryType}&string=${string}`)
     .then(response => {
       dispatch({
-        type: actionTypes.GET_PRODUCTS.SUCCESS,
-        foods: response.data
+        type: actionTypes.SEARCH_PRODUCTS.SUCCESS,
+        searchResults: response.data
       });
     }).catch(error => {
       dispatch({
-        type: actionTypes.GET_PRODUCTS.ERROR,
+        type: actionTypes.SEARCH_PRODUCTS.ERROR,
         error
       });
     });

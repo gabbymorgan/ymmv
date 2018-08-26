@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'reactstrap';
+import { SearchBar } from '../components';
+import { SearchResults } from '../containers';
+import { Row } from 'reactstrap';
 
-import { Search } from '../containers';
-
-class Main extends Component {
+class Search extends Component {
   render() {
     return (
       <Row>
-        <Search/>
+        <SearchBar/>
+        <SearchResults/>
       </Row>
-
     );
   }
 }
 
-export default Main;
+export default Search;

@@ -1,9 +1,9 @@
-import Search from './Search/Search';
-import Nav from './Nav/Nav';
-import SessionModal from './SessionModal/SessionModal';
+import SearchResults from './SearchResults';
+import Nav from './Nav';
+import SessionModal from './SessionModal';
 
 export {
-  Search,
+  SearchResults,
   Nav,
   SessionModal,
 }

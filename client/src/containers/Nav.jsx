@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { UserNav, GuestNav } from '../../components';
+import { UserNav, GuestNav } from '../components';
 
 class NavContainer extends Component {
   render() {

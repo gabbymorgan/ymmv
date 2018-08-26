@@ -2,9 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 
-import { Button, Modal, ModalHeader, ModalFooter } from '../../styles';
-import { LoginModal, RegisterModal } from '../../components';
-import { hideSessionModal } from '../../actions';
+import { Button, Modal, ModalHeader, ModalFooter } from '../styles';
+import { LoginModal, RegisterModal } from '../components';
+import { hideSessionModal } from '../actions';
 
 class SessionModal extends React.Component {
   constructor(props) {

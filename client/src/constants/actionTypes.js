@@ -3,7 +3,7 @@ const actionTypes = {
   LOGOUT: {},
   REGISTER: {},
   GET_USERS: {},
-  GET_PRODUCTS: {},
+  SEARCH_PRODUCTS: {},
   CREATE_PRODUCT: {},
   GET_REPORTS: {},
   CREATE_REPORT: {},
