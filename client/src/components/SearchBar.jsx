@@ -2,12 +2,21 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { searchProducts } from '../actions';
-import { Input, Form } from '../styles';
+import { Input, InputGroup, Form } from '../styles';
 
 class SearchBar extends Component {
-  handleChange({ target }) {
-    const { value } = target;
-    this.props.searchProducts('name', value);
+  state = {
+    queryType: 'name',
+  }
+
+  handleQueryString({ target }) {
+    this.props.searchProducts(this.state.queryType, target.value);
+  }
+
+  handleQueryType({ target }) {
+    this.setState({
+      queryType: target.value,
+    });
   }
 
   render() {
@@ -16,13 +25,31 @@ class SearchBar extends Component {
         <Input
           name="string"
           placeholder="this is where the searching happens"
-          onChange={this.handleChange.bind(this)}
+          onChange={this.handleQueryString.bind(this)}
         />
-        <input type="radio" name="queryType1" value="name"/>Product Name<br/>
-        <input type="radio" name="queryType2" value="companyName"/>Company Name
+        <InputGroup>
+          <input
+            type="radio"
+            name="queryType"
+            value="name"
+            checked={this.state.queryType === 'name'}
+            onChange={this.handleQueryType.bind(this)}
+          />
+          <p>Product Name</p>
+        </InputGroup>
+        <InputGroup>
+          <input
+            type="radio"
+            name="queryType"
+            value="companyName"
+            checked={this.state.queryType === 'name'}
+            onChange={this.handleQueryType.bind(this)}
+          />
+          <p>Company Name</p>
+        </InputGroup>
       </Form>
     );
   }
 }
 
-export default connect(null, {searchProducts})(SearchBar);
+export default connect(null, { searchProducts })(SearchBar);
