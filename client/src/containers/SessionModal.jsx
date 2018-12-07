@@ -30,6 +30,12 @@ class SessionModal extends React.Component {
     })
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (!prevProps.isLoggedIn && this.props.isLoggedIn) {
+      this.props.hideSessionModal();
+    }
+  }
+
   toggle() {
     this.props.hideSessionModal();
   }
@@ -93,6 +99,7 @@ const ModalSelector = (props) => {
 const mapStateToProps = (state) => {
   return {
     showingSessionModal: state.modals.showingSessionModal,
+    isLoggedIn: state.user.isLoggedIn,
   }
 }
 

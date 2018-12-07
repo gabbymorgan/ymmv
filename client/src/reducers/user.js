@@ -19,6 +19,10 @@ export default (state = defaultState, action) => {
         isLoggedIn: true,
         profile: action.profile,
       }
+    case actionTypes.LOGOUT:
+      return {
+        ...defaultState
+      }
     default:
       return state
   }

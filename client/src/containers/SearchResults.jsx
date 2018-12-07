@@ -6,11 +6,13 @@ import { Result } from '../components';
 
 class SearchResults extends Component {
   render() {
-    if (!this.props.searchResults) return <h1>No results</h1>;
+    if (!this.props.searchResults) return (
+      <h1>No results</h1>
+    );
     return (
       <Col>
-        { this.props.searchResults.map(product => {
-          return <Result product={product}/>
+        {this.props.searchResults.map(product => {
+          return <Result key={product._id} product={product} />
         })}
       </Col>
     );

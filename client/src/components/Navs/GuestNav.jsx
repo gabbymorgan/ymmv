@@ -5,10 +5,8 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
 } from 'reactstrap';
 
 import { showSessionModal } from '../../actions';
@@ -38,24 +36,24 @@ class GuestNav extends React.Component {
       <div>
         <Navbar color="light" light expand="md">
           <Link to="/">
-            <NavbarBrand>your mileage may vary</NavbarBrand>
+            <div className="navbar-brand">your mileage may vary</div>
           </Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <Link to='/about'>
-                  <NavLink>About</NavLink>
+                  <div className="nav-link">About</div>
                 </Link>
               </NavItem>
               <NavItem>
                 <Link to='/contact'>
-                    <NavLink>Contact</NavLink>
+                    <div className="nav-link">Contact</div>
                 </Link>
               </NavItem>
               <NavItem>
                 <Link to='/'>
-                    <NavLink onClick={() => this.showModal() }>Sign In</NavLink>
+                    <div className="nav-link" onClick={() => this.showModal() }>Sign In</div>
                 </Link>
               </NavItem>
             </Nav>

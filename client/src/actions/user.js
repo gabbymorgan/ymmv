@@ -34,15 +34,6 @@ export const login = (email, username, password) => (dispatch) => {
 };
 
 export const logout = () => (dispatch) => {
-  dispatch({ type: actionTypes.LOGOUT.IN_PROGRESS });
-  return axios
-  .post('users/login/')
-  .then(response => {
-    dispatch({ type: actionTypes.LOGOUT.SUCCESS });
-  }).catch(error => {
-    dispatch({
-      type: actionTypes.LOGOUT.ERROR,
-      error,
-    });
-  });
+  localStorage.clear();
+  dispatch({ type: actionTypes.LOGOUT });
 };

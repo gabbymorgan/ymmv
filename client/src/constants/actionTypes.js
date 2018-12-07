@@ -1,6 +1,8 @@
 const actionTypes = {
   LOGIN: {},
-  LOGOUT: {},
+  LOGOUT: 'LOGOUT',
+  SHOW_SESSION_MODAL: 'SHOW_SESSION_MODAL',
+  HIDE_SESSION_MODAL: 'HIDE_SESSION_MODAL',
   REGISTER: {},
   GET_USERS: {},
   SEARCH_PRODUCTS: {},
@@ -11,12 +13,12 @@ const actionTypes = {
 };
 
 Object.keys(actionTypes).forEach(type => {
-  actionTypes[type].SUCCESS = `${type}_SUCCESS`;
-  actionTypes[type].ERROR = `${type}_ERROR`;
-  actionTypes[type].IN_PROGRESS = `${type}_IN_PROGRESS`;
+  if (typeof actionTypes[type] === "object") {
+    actionTypes[type].SUCCESS = `${type}_SUCCESS`;
+    actionTypes[type].ERROR = `${type}_ERROR`;
+    actionTypes[type].IN_PROGRESS = `${type}_IN_PROGRESS`;    
+  }
 });
 
-actionTypes.SHOW_SESSION_MODAL = 'SHOW_SESSION_MODAL';
-actionTypes.HIDE_SESSION_MODAL = 'HIDE_SESSION_MODAL';
 
 export default actionTypes;
