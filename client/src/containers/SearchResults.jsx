@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Col } from 'reactstrap';
+import { Row } from 'reactstrap';
 
 import { Result } from '../components';
 
@@ -10,11 +10,11 @@ class SearchResults extends Component {
       <h1>No results</h1>
     );
     return (
-      <Col>
+      <Row>
         {this.props.searchResults.map(product => {
           return <Result key={product._id} product={product} />
         })}
-      </Col>
+      </Row>
     );
   }
 }

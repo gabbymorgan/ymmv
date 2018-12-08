@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as RRLink } from 'react-router-dom';
 import {
   Container as BSContainer,
   Modal as BSModal,
@@ -10,6 +11,7 @@ import {
   Form as BSForm,
   Label as BSLabel,
   Card as BSCard,
+  Button as BSButton,
 } from 'reactstrap';
 
 import { colors } from '../constants/theme';
@@ -37,8 +39,7 @@ export const ModalFooter = styled(BSModalFooter)`
   background: ${colors.white};
 `;
 
-export const Button = styled.button`
-  border-radius: 5px 5px;
+export const Button = styled(BSButton)`
   background: ${colors.tertiary};
 `;
 
@@ -49,6 +50,10 @@ export const Input = styled(BSInput)`
 `;
 
 export const InputGroup = styled(BSInputGroup)`
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: center
 `;
 
 export const Label = styled(BSLabel)`
@@ -56,5 +61,9 @@ export const Label = styled(BSLabel)`
 `;
 
 export const Card = styled(BSCard)`
-  width: 50%;
+  height: 35em;
+  margin-bottom: 1rem;
+`;
+
+export const Link = styled(RRLink)`
 `;
