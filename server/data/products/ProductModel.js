@@ -4,8 +4,8 @@ const Company = require('../companies/CompanyModel');
 
 const ProductSchema = new mongoose.Schema({
     name: { type: String, required: true, maxLength: 128, index: true },
-    company: { type: mongoose.Schema.Types.ObjectId, ref: 'Company' },
-    companyName: { type: String, require: true },
+    company: { type: mongoose.Schema.Types.ObjectId, ref: 'Company', required: true },
+    companyName: { type: String },
     description: { type: String, required: true, maxlength: 256 },
     ingredients: [{ type: String, maxlength: 64 }],
     ratings: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Rating' }],
