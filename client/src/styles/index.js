@@ -8,10 +8,12 @@ import {
   ModalFooter as BSModalFooter,
   Input as BSInput,
   InputGroup as BSInputGroup,
+  ButtonGroup as BSButtonGroup,
   Form as BSForm,
   Label as BSLabel,
   Card as BSCard,
   Button as BSButton,
+  Row as BSRow,
 } from 'reactstrap';
 
 import { colors } from '../constants/theme';
@@ -22,6 +24,8 @@ import styled from 'styled-components';
 export const Container = styled(BSContainer)`
   background: ${colors.white};
   min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
 `;
 
 export const Modal = styled(BSModal)`
@@ -46,14 +50,32 @@ export const Button = styled(BSButton)`
 export const Form = styled(BSForm)`
 `;
 
+export const SearchBarRow = styled(BSRow)`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+`
+
+export const SearchForm = styled(BSForm)`
+  margin: 2rem 0 4rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 50%;
+`;
+
 export const Input = styled(BSInput)`
 `;
 
+export const SearchInput = styled(BSInput)`
+`;
+
 export const InputGroup = styled(BSInputGroup)`
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  align-content: center
+  width: 100%;
+`;
+
+export const ButtonGroup = styled(BSButtonGroup)`
+  margin: 1rem 0 0 0;
 `;
 
 export const Label = styled(BSLabel)`

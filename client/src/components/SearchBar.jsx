@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { ButtonGroup } from 'reactstrap';
 import { FaPlusCircle } from 'react-icons/fa';
 
 import { searchProducts } from '../actions';
-import { Input, Form, Button, Link } from '../styles';
+import { SearchBarRow, SearchInput, SearchForm, Button, Link, ButtonGroup } from '../styles';
 
 class SearchBar extends Component {
   state = {
@@ -23,35 +22,37 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <Form type="filter">
-        <Input
-          color="primary"
-          name="string"
-          placeholder="this is where the searching happens"
-          onChange={this.handleQueryString.bind(this)}
-        />
-        <ButtonGroup>
-          <Button
+      <SearchBarRow>
+        <SearchForm type="filter">
+          <SearchInput
             color="primary"
-            active={this.state.queryType === 'name'}
-            onClick={() => this.handleQueryType('name')}
-          >Product Name</Button>
-          <Button
-            color="primary"
-            active={this.state.queryType === 'companyName'}
-            onClick={() => this.handleQueryType('companyName')}
-          >Company Name</Button>
-        </ButtonGroup>
-        { 
-          this.props.isLoggedIn
-            ? (
-              <Link to="/create/product">
-                <FaPlusCircle size="30" color="gray" style={{ margin: "1rem" }} />
-              </Link>
-            )
-            : null
-        }
-      </Form>
+            name="string"
+            placeholder="this is where the searching happens"
+            onChange={this.handleQueryString.bind(this)}
+          />
+          <ButtonGroup>
+            <Button
+              color="primary"
+              active={this.state.queryType === 'name'}
+              onClick={() => this.handleQueryType('name')}
+            >Product Name</Button>
+            <Button
+              color="primary"
+              active={this.state.queryType === 'company'}
+              onClick={() => this.handleQueryType('company')}
+            >Company Name</Button>
+          </ButtonGroup>
+          {
+            this.props.isLoggedIn
+              ? (
+                <Link to="/create/product">
+                  <FaPlusCircle size="30" color="gray" style={{ margin: "1rem" }} />
+                </Link>
+              )
+              : null
+          }
+        </SearchForm>
+      </SearchBarRow>
     );
   }
 }

@@ -2,6 +2,7 @@ const  mongoose = require('mongoose');
 const fs = require('fs');
 
 const Product = require('./ProductModel');
+const Company = require('../companies/CompanyModel');
 
 const products = JSON.parse(fs.readFileSync('./server/data/products/products.json'));
 const dbUrl = process.env.NODE_ENV === 'production'
@@ -11,13 +12,15 @@ const dbUrl = process.env.NODE_ENV === 'production'
 
 mongoose
   .connect(dbUrl)
-  .then(() => {
+  .then(async () => {
     console.log('\n=== Connected to MongoDB ===\n');
-    products.forEach(product => {
+    const companies = await Company.find().limit(products.length);
+    companies.forEach(async (company, index) => {
+        const product = products[index];
         const truncatedDescription = product.description.slice(0,255);
-        fixedProduct = Object.assign(product, { description: truncatedDescription })
+        fixedProduct = Object.assign(product, { description: truncatedDescription, company: company._id })
         newProduct = new Product(product);
-        newProduct.save();
+        await newProduct.save();
     });
   })
   .catch(err => console.log('database conection failed', err));

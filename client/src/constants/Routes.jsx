@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { Row } from 'reactstrap';
 import { Route } from 'react-router-dom';
 
-import { Main } from '../pages';
+import { Main, CreateProduct, MyProfile } from '../pages';
 
 export default () => {
   return (
     <Row>
       <Route exact path='/' component={ Main } />
+      <Route path='/me' component={ MyProfile } />
+      <Route exact path='/create/product' component={ CreateProduct } />
     </Row>
   );
 }

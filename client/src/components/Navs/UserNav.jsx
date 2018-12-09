@@ -7,6 +7,7 @@ import {
   NavbarToggler,
   Nav,
   NavItem,
+  Row,
 } from 'reactstrap';
 
 import { showSessionModal, logout } from '../../actions';
@@ -33,7 +34,7 @@ class UserNav extends React.Component {
 
   render() {
     return (
-      <div>
+
         <Navbar color="light" light expand="md">
           <Link to="/">
             <div className="navbar-brand">your mileage may vary</div>
@@ -59,7 +60,6 @@ class UserNav extends React.Component {
             </Nav>
           </Collapse>
         </Navbar>
-      </div>
     );
   }
 }

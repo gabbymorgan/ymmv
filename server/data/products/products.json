@@ -1,9 +1,7 @@
 [
   {
     "name": "Pepper - Black, Crushed",
-    "company": {
-      "name": "Friesen-Bauch"
-    },
+
     "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
     "ingredients": [
       "gravida",
@@ -18,9 +16,7 @@
   },
   {
     "name": "Coffee Decaf Colombian",
-    "company": {
-      "name": "Jakubowski Group"
-    },
+
     "description": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
     "ingredients": [
       "justo",
@@ -34,9 +30,6 @@
   },
   {
     "name": "Juice - Pineapple, 48 Oz",
-    "company": {
-      "name": "Muller-Kovacek"
-    },
     "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
     "ingredients": [
       "aenean",
@@ -51,9 +44,6 @@
   },
   {
     "name": "Yogurt - French Vanilla",
-    "company": {
-      "name": "Murazik-Bode"
-    },
     "description": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
     "ingredients": [
       "quam",
@@ -69,9 +59,7 @@
   },
   {
     "name": "Yogurt - Cherry, 175 Gr",
-    "company": {
-      "name": "Hoppe-Mann"
-    },
+
     "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
     "ingredients": [
       "phasellus",
@@ -86,9 +74,7 @@
   },
   {
     "name": "Pomegranates",
-    "company": {
-      "name": "Leuschke, Welch and Spinka"
-    },
+
     "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
     "ingredients": [
       "convallis",
@@ -101,9 +87,7 @@
   },
   {
     "name": "Juice - Apple, 341 Ml",
-    "company": {
-      "name": "Carter Inc"
-    },
+
     "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
     "ingredients": [
       "vestibulum",
@@ -120,9 +104,7 @@
   },
   {
     "name": "Wine - Two Oceans Cabernet",
-    "company": {
-      "name": "Okuneva-Bode"
-    },
+
     "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
     "ingredients": [
       "volutpat",
@@ -138,9 +120,7 @@
   },
   {
     "name": "Roe - White Fish",
-    "company": {
-      "name": "Gleichner, O'Hara and Lind"
-    },
+
     "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
     "ingredients": [
       "ipsum",
@@ -154,9 +134,7 @@
   },
   {
     "name": "Rabbit - Whole",
-    "company": {
-      "name": "Bernhard-Paucek"
-    },
+
     "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
     "ingredients": [
       "dis",
@@ -170,9 +148,7 @@
   },
   {
     "name": "Milkettes - 2%",
-    "company": {
-      "name": "Fadel, Veum and Macejkovic"
-    },
+
     "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
     "ingredients": [
       "fusce",
@@ -186,9 +162,7 @@
   },
   {
     "name": "Pasta - Ravioli",
-    "company": {
-      "name": "Corwin LLC"
-    },
+
     "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
     "ingredients": [
       "ultrices",
@@ -200,9 +174,7 @@
   },
   {
     "name": "Milk - Skim",
-    "company": {
-      "name": "Homenick and Sons"
-    },
+
     "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
     "ingredients": [
       "ultrices",
@@ -217,9 +189,7 @@
   },
   {
     "name": "Bread - Raisin",
-    "company": {
-      "name": "Quigley-Hammes"
-    },
+
     "description": "In congue. Etiam justo. Etiam pretium iaculis justo.",
     "ingredients": [
       "mattis",
@@ -236,9 +206,7 @@
   },
   {
     "name": "Yukon Jack",
-    "company": {
-      "name": "Gleason, Becker and Stokes"
-    },
+
     "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
     "ingredients": [
       "vivamus",
@@ -251,9 +219,7 @@
   },
   {
     "name": "Muffin - Bran Ind Wrpd",
-    "company": {
-      "name": "Thompson-McDermott"
-    },
+
     "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
     "ingredients": [
       "dui",
@@ -266,9 +232,7 @@
   },
   {
     "name": "Salt - Rock, Course",
-    "company": {
-      "name": "Deckow LLC"
-    },
+
     "description": "Fusce consequat. Nulla nisl. Nunc nisl.",
     "ingredients": [
       "vivamus",
@@ -285,9 +249,7 @@
   },
   {
     "name": "Bag - Bread, White, Plain",
-    "company": {
-      "name": "Hane-Skiles"
-    },
+
     "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
     "ingredients": [
       "non",
@@ -302,9 +264,7 @@
   },
   {
     "name": "Gooseberry",
-    "company": {
-      "name": "Deckow-Kohler"
-    },
+
     "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
     "ingredients": [
       "at",
@@ -320,9 +280,7 @@
   },
   {
     "name": "Coffee - Flavoured",
-    "company": {
-      "name": "Stanton-Davis"
-    },
+
     "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
     "ingredients": [
       "tempus",
@@ -334,9 +292,7 @@
   },
   {
     "name": "Russian Prince",
-    "company": {
-      "name": "Haag, Mitchell and Connelly"
-    },
+
     "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
     "ingredients": [
       "ipsum",
@@ -349,9 +305,7 @@
   },
   {
     "name": "Rhubarb",
-    "company": {
-      "name": "Casper-Adams"
-    },
+
     "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
     "ingredients": [
       "amet",
@@ -368,9 +322,7 @@
   },
   {
     "name": "Mushroom - King Eryingii",
-    "company": {
-      "name": "Kshlerin Inc"
-    },
+
     "description": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
     "ingredients": [
       "interdum",
@@ -382,9 +334,7 @@
   },
   {
     "name": "Remy Red Berry Infusion",
-    "company": {
-      "name": "Bogisich Group"
-    },
+
     "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
     "ingredients": [
       "vitae",
@@ -401,9 +351,7 @@
   },
   {
     "name": "Melon - Honey Dew",
-    "company": {
-      "name": "Medhurst Inc"
-    },
+
     "description": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
     "ingredients": [
       "eget",
@@ -420,9 +368,7 @@
   },
   {
     "name": "Bread - Pumpernickle, Rounds",
-    "company": {
-      "name": "O'Reilly, Zulauf and Heathcote"
-    },
+
     "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
     "ingredients": [
       "nunc",
@@ -436,9 +382,7 @@
   },
   {
     "name": "Table Cloth 81x81 White",
-    "company": {
-      "name": "Kutch, Robel and Ziemann"
-    },
+
     "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
     "ingredients": [
       "etiam",
@@ -454,9 +398,7 @@
   },
   {
     "name": "Veal - Striploin",
-    "company": {
-      "name": "Rogahn, Wolff and Conn"
-    },
+
     "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
     "ingredients": [
       "imperdiet",
@@ -468,9 +410,7 @@
   },
   {
     "name": "Beef - Tongue, Fresh",
-    "company": {
-      "name": "Collins-Schneider"
-    },
+
     "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
     "ingredients": [
       "neque",
@@ -484,9 +424,7 @@
   },
   {
     "name": "Jam - Strawberry, 20 Ml Jar",
-    "company": {
-      "name": "Effertz Inc"
-    },
+
     "description": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
     "ingredients": [
       "porttitor",
@@ -502,9 +440,7 @@
   },
   {
     "name": "Appetizer - Lobster Phyllo Roll",
-    "company": {
-      "name": "Murazik, Rice and Keeling"
-    },
+
     "description": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
     "ingredients": [
       "sit",
@@ -519,9 +455,7 @@
   },
   {
     "name": "Tea - English Breakfast",
-    "company": {
-      "name": "Konopelski-O'Connell"
-    },
+
     "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
     "ingredients": [
       "nulla",
@@ -536,9 +470,7 @@
   },
   {
     "name": "Trout Rainbow Whole",
-    "company": {
-      "name": "Denesik Group"
-    },
+
     "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
     "ingredients": [
       "ipsum",
@@ -554,9 +486,7 @@
   },
   {
     "name": "Club Soda - Schweppes, 355 Ml",
-    "company": {
-      "name": "Leuschke-Mraz"
-    },
+
     "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
     "ingredients": [
       "iaculis",
@@ -569,9 +499,7 @@
   },
   {
     "name": "Spring Roll Wrappers",
-    "company": {
-      "name": "Kihn, Hintz and Braun"
-    },
+
     "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
     "ingredients": [
       "felis",
@@ -588,9 +516,7 @@
   },
   {
     "name": "Cheese - Mascarpone",
-    "company": {
-      "name": "Stroman, Hessel and Kassulke"
-    },
+
     "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
     "ingredients": [
       "nam",
@@ -607,9 +533,7 @@
   },
   {
     "name": "Vinegar - Balsamic, White",
-    "company": {
-      "name": "Mertz, Emard and Klein"
-    },
+
     "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
     "ingredients": [
       "phasellus",
@@ -622,9 +546,7 @@
   },
   {
     "name": "Veal - Brisket, Provimi,bnls",
-    "company": {
-      "name": "Christiansen, Bergstrom and Wisoky"
-    },
+
     "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
     "ingredients": [
       "ac",
@@ -641,9 +563,7 @@
   },
   {
     "name": "Sauce - Alfredo",
-    "company": {
-      "name": "DuBuque Group"
-    },
+
     "description": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
     "ingredients": [
       "eget",
@@ -658,9 +578,7 @@
   },
   {
     "name": "Bar - Granola Trail Mix Fruit Nut",
-    "company": {
-      "name": "Kuhn, Feeney and Nitzsche"
-    },
+
     "description": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
     "ingredients": [
       "pulvinar",
@@ -676,9 +594,7 @@
   },
   {
     "name": "Spice - Onion Powder Granulated",
-    "company": {
-      "name": "Hamill-Zieme"
-    },
+
     "description": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
     "ingredients": [
       "non",
@@ -694,9 +610,7 @@
   },
   {
     "name": "Bread - Pullman, Sliced",
-    "company": {
-      "name": "Predovic, White and Swaniawski"
-    },
+
     "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "ingredients": [
       "pulvinar",
@@ -710,9 +624,7 @@
   },
   {
     "name": "Pork - Ham, Virginia",
-    "company": {
-      "name": "Borer, Willms and Monahan"
-    },
+
     "description": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
     "ingredients": [
       "parturient",
@@ -726,9 +638,7 @@
   },
   {
     "name": "Cinnamon - Stick",
-    "company": {
-      "name": "Auer Inc"
-    },
+
     "description": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
     "ingredients": [
       "odio",
@@ -743,9 +653,7 @@
   },
   {
     "name": "Melon - Watermelon, Seedless",
-    "company": {
-      "name": "Koch, Cruickshank and Gutmann"
-    },
+
     "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
     "ingredients": [
       "cras",
@@ -760,9 +668,7 @@
   },
   {
     "name": "Nantuket Peach Orange",
-    "company": {
-      "name": "Weimann LLC"
-    },
+
     "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
     "ingredients": [
       "ante",
@@ -774,9 +680,7 @@
   },
   {
     "name": "Carrots - Mini Red Organic",
-    "company": {
-      "name": "Rice, Rau and Rau"
-    },
+
     "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
     "ingredients": [
       "cras",
@@ -792,9 +696,7 @@
   },
   {
     "name": "Garlic",
-    "company": {
-      "name": "Langworth, McDermott and Marvin"
-    },
+
     "description": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
     "ingredients": [
       "sed",
@@ -810,9 +712,7 @@
   },
   {
     "name": "Vinegar - White",
-    "company": {
-      "name": "Lesch Inc"
-    },
+
     "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
     "ingredients": [
       "vulputate",
@@ -828,9 +728,7 @@
   },
   {
     "name": "Port - 74 Brights",
-    "company": {
-      "name": "Hauck Group"
-    },
+
     "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
     "ingredients": [
       "sapien",
@@ -842,9 +740,7 @@
   },
   {
     "name": "Extract Vanilla Pure",
-    "company": {
-      "name": "Nolan-Schamberger"
-    },
+
     "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
     "ingredients": [
       "lacinia",
@@ -858,9 +754,7 @@
   },
   {
     "name": "Vodka - Hot, Lnferno",
-    "company": {
-      "name": "Johns LLC"
-    },
+
     "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
     "ingredients": [
       "arcu",
@@ -872,9 +766,7 @@
   },
   {
     "name": "Tea - Black Currant",
-    "company": {
-      "name": "Kulas-Connelly"
-    },
+
     "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
     "ingredients": [
       "massa",
@@ -888,9 +780,7 @@
   },
   {
     "name": "Ginger - Pickled",
-    "company": {
-      "name": "Vandervort, Conroy and Grant"
-    },
+
     "description": "Fusce consequat. Nulla nisl. Nunc nisl.",
     "ingredients": [
       "sodales",
@@ -904,9 +794,7 @@
   },
   {
     "name": "Spice - Montreal Steak Spice",
-    "company": {
-      "name": "Braun, Murray and Stark"
-    },
+
     "description": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
     "ingredients": [
       "consequat",
@@ -922,9 +810,7 @@
   },
   {
     "name": "Shrimp - Black Tiger 6 - 8",
-    "company": {
-      "name": "Ebert, Goodwin and Crooks"
-    },
+
     "description": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
     "ingredients": [
       "est",
@@ -938,9 +824,7 @@
   },
   {
     "name": "Muffins - Assorted",
-    "company": {
-      "name": "Harvey, Hodkiewicz and Sipes"
-    },
+
     "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
     "ingredients": [
       "sapien",
@@ -955,9 +839,7 @@
   },
   {
     "name": "Paste - Black Olive",
-    "company": {
-      "name": "Ziemann LLC"
-    },
+
     "description": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
     "ingredients": [
       "ipsum",
@@ -972,9 +854,7 @@
   },
   {
     "name": "Stock - Fish",
-    "company": {
-      "name": "Jakubowski-Shanahan"
-    },
+
     "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
     "ingredients": [
       "cum",
@@ -990,9 +870,7 @@
   },
   {
     "name": "Veal - Tenderloin, Untrimmed",
-    "company": {
-      "name": "Smith-Breitenberg"
-    },
+
     "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
     "ingredients": [
       "eget",
@@ -1004,9 +882,7 @@
   },
   {
     "name": "Bread - Rosemary Focaccia",
-    "company": {
-      "name": "White, Osinski and Wintheiser"
-    },
+
     "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
     "ingredients": [
       "est",
@@ -1022,9 +898,7 @@
   },
   {
     "name": "Pears - Anjou",
-    "company": {
-      "name": "Heidenreich Inc"
-    },
+
     "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
     "ingredients": [
       "justo",
@@ -1040,9 +914,7 @@
   },
   {
     "name": "Soup - Beef, Base Mix",
-    "company": {
-      "name": "Jenkins-Halvorson"
-    },
+
     "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
     "ingredients": [
       "nibh",
@@ -1056,9 +928,7 @@
   },
   {
     "name": "Mustard - Individual Pkg",
-    "company": {
-      "name": "Luettgen, Reynolds and Collier"
-    },
+
     "description": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
     "ingredients": [
       "sit",
@@ -1074,9 +944,7 @@
   },
   {
     "name": "Crackers - Water",
-    "company": {
-      "name": "Hoppe-Conroy"
-    },
+
     "description": "In congue. Etiam justo. Etiam pretium iaculis justo.",
     "ingredients": [
       "amet",
@@ -1088,9 +956,7 @@
   },
   {
     "name": "Sauce Tomato Pouch",
-    "company": {
-      "name": "Hermiston LLC"
-    },
+
     "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
     "ingredients": [
       "ultrices",
@@ -1102,9 +968,7 @@
   },
   {
     "name": "Cookies Oatmeal Raisin",
-    "company": {
-      "name": "Auer and Sons"
-    },
+
     "description": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
     "ingredients": [
       "imperdiet",
@@ -1117,9 +981,7 @@
   },
   {
     "name": "Steam Pan Full Lid",
-    "company": {
-      "name": "Yundt, Harris and Ebert"
-    },
+
     "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
     "ingredients": [
       "consequat",
@@ -1135,9 +997,7 @@
   },
   {
     "name": "Bread Base - Gold Formel",
-    "company": {
-      "name": "Smith LLC"
-    },
+
     "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
     "ingredients": [
       "vestibulum",
@@ -1153,9 +1013,7 @@
   },
   {
     "name": "Barley - Pearl",
-    "company": {
-      "name": "Tremblay Inc"
-    },
+
     "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
     "ingredients": [
       "nullam",
@@ -1172,9 +1030,7 @@
   },
   {
     "name": "Roe - Lump Fish, Red",
-    "company": {
-      "name": "DuBuque, Rath and Murazik"
-    },
+
     "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
     "ingredients": [
       "lectus",
@@ -1188,9 +1044,7 @@
   },
   {
     "name": "Cream - 18%",
-    "company": {
-      "name": "Herzog Group"
-    },
+
     "description": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
     "ingredients": [
       "est",
@@ -1207,9 +1061,7 @@
   },
   {
     "name": "Waffle Stix",
-    "company": {
-      "name": "Lakin Inc"
-    },
+
     "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
     "ingredients": [
       "interdum",
@@ -1222,9 +1074,7 @@
   },
   {
     "name": "Isomalt",
-    "company": {
-      "name": "Hegmann, Kohler and Hoeger"
-    },
+
     "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
     "ingredients": [
       "semper",
@@ -1238,9 +1088,7 @@
   },
   {
     "name": "The Pop Shoppe Pinapple",
-    "company": {
-      "name": "Jenkins, Hilpert and Kuhic"
-    },
+
     "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
     "ingredients": [
       "integer",
@@ -1255,9 +1103,7 @@
   },
   {
     "name": "Miso Paste White",
-    "company": {
-      "name": "Okuneva, Stark and Sawayn"
-    },
+
     "description": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
     "ingredients": [
       "tempor",
@@ -1274,9 +1120,7 @@
   },
   {
     "name": "Shrimp - 100 / 200 Cold Water",
-    "company": {
-      "name": "Schiller and Sons"
-    },
+
     "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
     "ingredients": [
       "luctus",
@@ -1288,9 +1132,7 @@
   },
   {
     "name": "Trout Rainbow Whole",
-    "company": {
-      "name": "Emmerich and Sons"
-    },
+
     "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
     "ingredients": [
       "erat",
@@ -1302,9 +1144,7 @@
   },
   {
     "name": "Wine - Trimbach Pinot Blanc",
-    "company": {
-      "name": "Hoppe Group"
-    },
+
     "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
     "ingredients": [
       "felis",
@@ -1321,9 +1161,7 @@
   },
   {
     "name": "Beer - Labatt Blue",
-    "company": {
-      "name": "Crist Group"
-    },
+
     "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
     "ingredients": [
       "amet",
@@ -1337,9 +1175,7 @@
   },
   {
     "name": "Salmon - Atlantic, No Skin",
-    "company": {
-      "name": "Lueilwitz, Marvin and Hintz"
-    },
+
     "description": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
     "ingredients": [
       "risus",
@@ -1356,9 +1192,7 @@
   },
   {
     "name": "Piping Jelly - All Colours",
-    "company": {
-      "name": "Schumm-Hoppe"
-    },
+
     "description": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
     "ingredients": [
       "convallis",
@@ -1372,9 +1206,7 @@
   },
   {
     "name": "Tomatoes",
-    "company": {
-      "name": "Nienow, Smitham and Leffler"
-    },
+
     "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
     "ingredients": [
       "scelerisque",
@@ -1386,9 +1218,7 @@
   },
   {
     "name": "Wine - Chenin Blanc K.w.v.",
-    "company": {
-      "name": "Kassulke-Lueilwitz"
-    },
+
     "description": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
     "ingredients": [
       "lorem",
@@ -1402,9 +1232,7 @@
   },
   {
     "name": "Juice - Orange, Concentrate",
-    "company": {
-      "name": "Hegmann-Fahey"
-    },
+
     "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
     "ingredients": [
       "ipsum",
@@ -1421,9 +1249,7 @@
   },
   {
     "name": "Sambuca - Ramazzotti",
-    "company": {
-      "name": "Daugherty LLC"
-    },
+
     "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
     "ingredients": [
       "semper",
@@ -1437,9 +1263,7 @@
   },
   {
     "name": "Table Cloth 62x120 Colour",
-    "company": {
-      "name": "Marvin Inc"
-    },
+
     "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
     "ingredients": [
       "dolor",
@@ -1454,9 +1278,7 @@
   },
   {
     "name": "Glass Clear 7 Oz Xl",
-    "company": {
-      "name": "Wolf-Parker"
-    },
+
     "description": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
     "ingredients": [
       "consequat",
@@ -1472,9 +1294,7 @@
   },
   {
     "name": "The Pop Shoppe - Root Beer",
-    "company": {
-      "name": "Von-Roob"
-    },
+
     "description": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
     "ingredients": [
       "erat",
@@ -1488,9 +1308,7 @@
   },
   {
     "name": "Versatainer Nc - 8288",
-    "company": {
-      "name": "Deckow-Stanton"
-    },
+
     "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
     "ingredients": [
       "neque",
@@ -1507,9 +1325,7 @@
   },
   {
     "name": "Ecolab - Medallion",
-    "company": {
-      "name": "Ratke, Morar and Hilll"
-    },
+
     "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
     "ingredients": [
       "porttitor",
@@ -1525,9 +1341,7 @@
   },
   {
     "name": "Baking Powder",
-    "company": {
-      "name": "Von-Wintheiser"
-    },
+
     "description": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
     "ingredients": [
       "sed",
@@ -1539,9 +1353,7 @@
   },
   {
     "name": "Bread Base - Gold Formel",
-    "company": {
-      "name": "Hoeger-Reichert"
-    },
+
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
     "ingredients": [
       "ipsum",
@@ -1554,9 +1366,7 @@
   },
   {
     "name": "Soup - Cream Of Potato / Leek",
-    "company": {
-      "name": "Zulauf, Terry and Walker"
-    },
+
     "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
     "ingredients": [
       "praesent",
@@ -1570,9 +1380,7 @@
   },
   {
     "name": "Wine - Kwv Chenin Blanc South",
-    "company": {
-      "name": "Oberbrunner, Pagac and Kovacek"
-    },
+
     "description": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
     "ingredients": [
       "molestie",
@@ -1585,9 +1393,7 @@
   },
   {
     "name": "Vinegar - Balsamic, White",
-    "company": {
-      "name": "Fahey-Ortiz"
-    },
+
     "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
     "ingredients": [
       "odio",
@@ -1600,9 +1406,7 @@
   },
   {
     "name": "Lamb Rack - Ontario",
-    "company": {
-      "name": "Heathcote, VonRueden and Schinner"
-    },
+
     "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
     "ingredients": [
       "quam",
@@ -1618,9 +1422,7 @@
   },
   {
     "name": "Salt - Table",
-    "company": {
-      "name": "Blanda and Sons"
-    },
+
     "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
     "ingredients": [
       "elementum",
@@ -1634,9 +1436,7 @@
   },
   {
     "name": "Sauerkraut",
-    "company": {
-      "name": "Schmitt-Pfeffer"
-    },
+
     "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
     "ingredients": [
       "eget",
@@ -1653,9 +1453,7 @@
   },
   {
     "name": "Carbonated Water - Cherry",
-    "company": {
-      "name": "Stoltenberg-Strosin"
-    },
+
     "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
     "ingredients": [
       "non",
