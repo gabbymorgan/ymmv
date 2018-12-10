@@ -10,28 +10,22 @@ const ReportSchema = new mongoose.Schema({
     reactionLevel: { type: Number, max: 5, required: true },
 });
 
-ReportSchema.pre('save', async function() {
-    const sensitivities = await Sensitivity.find({ _id: { $in: this.sensitivityIds } });
-    for (let i = 0; i < sensitivities.length; i++) {
-        const sensitivity = sensitivities[i];
-        const { level, allergen } = sensitivity;
-        const rating = await Rating.findOne({ productId: this.productId, allergen });
+ReportSchema.statics.createRatings = async (report) => {
+    // update the associated ratings for that product
+    const foundSensitivities = await Sensitivity.find({ _id: { $in: report.sensitivityIds } });
+    const updateRatings = foundSensitivities.map(async (foundSensitivity) => {
+        const { level, allergen } = foundSensitivity;
+        const { productId } = report;
+        const rating = await Rating.findOne({ productId, allergen });
         if (!rating) {
-            newRating = new Rating({
-                productId: this.productId,
-                allergen: sensitivity.allergen,
-            });
+            newRating = new Rating({ productId, allergen });
             await newRating.save();
         }
         else {
-            const { average, sampleSize } = await rating.average(level);
-            await rating.update({
-                [level]: average,
-                sampleSize,
-            });
+            await rating.average(level);
         }
-    }
-});
-
+    });
+    await Promise.all(updateRatings);
+}
 
 module.exports = mongoose.model('Report', ReportSchema);

@@ -6,7 +6,7 @@ const UserSchema = new mongoose.Schema({
     lastName: { type: String, maxlength: 64 },
     email: { type: String, required: true },
     description: { type: String, maxlength: 256 },
-    sensitivities: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Sensitivity' }],
+    sensitivityIds: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Sensitivity' }],
     password: { type: String, minlength: 8, required: true },
     signUpDate: { type: Date, default: Date.now },
 });

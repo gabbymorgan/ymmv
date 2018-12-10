@@ -10,7 +10,7 @@ const SensitivitySchema = new mongoose.Schema({
 
 SensitivitySchema.pre('save', async function() {
     await User.findByIdAndUpdate(this.userId, {
-        $push: { sensitivities: this._id },
+        $push: { sensitivityIds: this._id },
     });
 })
 
