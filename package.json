@@ -27,11 +27,11 @@
     "heroku-postbuild": "cd client && npm install && npm run build",
     "test": "mocha tests/*.test.js",
     "lint": "eslint",
-    "loadCompanies": "node server/tests/CompanyModel.test.js",
-    "loadProducts": "node server/tests/ProductModel.test.js",
-    "loadUsers": "node server/tests/UserModel.test.js",
-    "loadSensitivities": "node server/tests/SensitivityModel.test.js",
-    "loadReports": "node server/tests/ReportModel.test.js"
+    "loadCompanies": "node server/tests/companies/loadCompanies.js",
+    "loadProducts": "node server/tests/products/loadProducts.js",
+    "loadUsers": "node server/tests/users/loadUsers.js",
+    "loadSensitivities": "node server/tests/sensitivities/loadSensitivities.js",
+    "loadReports": "node server/tests/reports/loadReports.js"
   },
   "devDependencies": {
     "dotenv": "^6.0.0",

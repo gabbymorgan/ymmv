@@ -1,12 +1,11 @@
 const mongoose = require('mongoose');
 const fs = require('fs');
 
-const Product = require('../data/products/ProductModel');
-const Report = require('../data/reports/ReportModel');
-const User = require('../data/users/UserModel');
-const Rating = require('../data/ratings/RatingModel');
+const Product = require('../../data/products/ProductModel');
+const Report = require('../../data/reports/ReportModel');
+const User = require('../../data/users/UserModel');
 
-const reportsData = JSON.parse(fs.readFileSync('./server/data/reports/reports.json'));
+const reportsData = JSON.parse(fs.readFileSync('./server/tests/reports/reports.json'));
 
 const dbUrl = process.env.NODE_ENV === 'production'
   // need new DB URL for project
@@ -31,10 +30,9 @@ mongoose
         details: truncatedDetails,
         reactionLevel
       });
-      const savedReport = await newReport.save();
-      const reportWithRatings = await savedReport.updateAssociatedRatings();
-      return reportWithRatings;
+      await newReport.save();
     });
     await Promise.all(loadReports);
+    mongoose.disconnect();
   })
   .catch(err => console.log('database conection failed', err));

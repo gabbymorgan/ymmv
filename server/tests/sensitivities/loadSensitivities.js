@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const fs = require('fs');
 
-const User = require('../data/users/UserModel');
-const Sensitivity = require('../data/sensitivities/SensitivityModel');
+const User = require('../../data/users/UserModel');
+const Sensitivity = require('../../data/sensitivities/SensitivityModel');
 
 const sensitivityData = [{ allergen: 'corn', sensitivityLevel: 'light' }, { allergen: 'wheat', sensitivityLevel: 'moderate' }]
 const dbUrl = process.env.NODE_ENV === 'production'
@@ -23,8 +23,9 @@ mongoose
         allergen,
         sensitivityLevel,
       });
-      newSensitivity.save();
+      await newSensitivity.save();
     });
-    return await Promise.all(assignSensitivities);
+    await Promise.all(assignSensitivities);
+    mongoose.disconnect();
   })
   .catch(err => console.log('database conection failed', err));

@@ -27,7 +27,7 @@ ReportSchema.methods.updateAssociatedRatings = async function() {
             newRating = new Rating({ productId, allergen });
             rating = await newRating.save();
         }
-        await rating.updateData(this._id, reactionLevel, sensitivityLevel);
+        await rating.updateData(sensitivityLevel, reactionLevel, this._id);
     });
     await Promise.all(updateRatings);
 }
