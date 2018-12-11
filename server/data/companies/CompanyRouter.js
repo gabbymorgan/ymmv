@@ -28,7 +28,7 @@ router
     newCompany.save()
       .then(savedCompany => {
         res.status(200).json(savedCompany);
-      }).catch(err => res.status(500).json({ message: "Server error." }))
+      }).catch(err => res.status(500).json({ message: err.message }))
   });
 
 module.exports = router;

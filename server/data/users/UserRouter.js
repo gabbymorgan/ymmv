@@ -10,7 +10,6 @@ passport.serializeUser(function (user, done) {
 });
 
 passport.deserializeUser(function (user, done) {
-  //If using Mongoose with MongoDB; if other you will need JS specific to that schema
   User.findById(id, function (err, user) {
       done(err, user);
   });
@@ -32,7 +31,6 @@ router
   .post('/login', (req, res) => {
     const { email, password } = req.body;
     User.findOne({ email })
-      // check if password matches
       .then((user) => {
         if (!user) {
           return res.status(400).json({ message: 'user record not found.' });
@@ -52,6 +50,7 @@ router
     const { userId } = req.session;
     User
       .findById(userId)
+      .populate('sensitivityIds')
       .then(user => {
         if (!user) {
           res.status(401).json({ message: "Unauthorized." });
