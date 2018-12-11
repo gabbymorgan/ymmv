@@ -32,12 +32,9 @@ mongoose
         reactionLevel
       });
       const savedReport = await newReport.save();
-      const reportWithRatings = await Report.createRatings(savedReport);
+      const reportWithRatings = await savedReport.updateAssociatedRatings();
       return reportWithRatings;
     });
-    const ratings = await Rating.find();
-    const updateRatings = ratings.map(async (rating) => rating.average());
     await Promise.all(loadReports);
-    await Promise.all(updateRatings);
   })
   .catch(err => console.log('database conection failed', err));

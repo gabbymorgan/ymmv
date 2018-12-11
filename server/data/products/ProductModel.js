@@ -8,7 +8,7 @@ const ProductSchema = new mongoose.Schema({
     companyName: { type: String },
     description: { type: String, required: true, maxlength: 256 },
     ingredients: [{ type: String, maxlength: 64 }],
-    ratings: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Rating' }],
+    ratingIds: { type: mongoose.Schema.Types.ObjectId, ref: 'Rating' },
 });
 
 ProductSchema.pre('save', async function() {

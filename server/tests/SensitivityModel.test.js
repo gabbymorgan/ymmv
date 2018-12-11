@@ -4,7 +4,7 @@ const fs = require('fs');
 const User = require('../data/users/UserModel');
 const Sensitivity = require('../data/sensitivities/SensitivityModel');
 
-const sensitivityData = [{ allergen: 'corn', level: 'light' }, { allergen: 'wheat', level: 'moderate' }]
+const sensitivityData = [{ allergen: 'corn', sensitivityLevel: 'light' }, { allergen: 'wheat', sensitivityLevel: 'moderate' }]
 const dbUrl = process.env.NODE_ENV === 'production'
   // need new DB URL for project
   ? ``
@@ -17,11 +17,11 @@ mongoose
     const users = await User.find();
     const assignSensitivities = users.map(async (user) => {
       const sensitivity = sensitivityData[Math.floor(Math.random() * sensitivityData.length)];
-      const { allergen, level } = sensitivity;
+      const { allergen, sensitivityLevel } = sensitivity;
       const newSensitivity = new Sensitivity({
         userId: user._id,
         allergen,
-        level,
+        sensitivityLevel,
       });
       newSensitivity.save();
     });

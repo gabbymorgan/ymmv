@@ -7,6 +7,10 @@ const router = express.Router();
 router
   .get('/', (req, res) => {
     const { queryType, string } = req.query;
+    const permittedFields = ['name', 'companyName'];
+    if (permittedFields.indexOf(queryType) === -1) {
+      return res.status(422).json({ message: "Invalid query. User can only GET by 'name' or 'companyName'."})
+    }
     Product
       .find({ [queryType]: new RegExp('.*'+string+'.*', "i") })
       .then(products => {

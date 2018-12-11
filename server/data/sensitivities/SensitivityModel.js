@@ -5,7 +5,7 @@ const User = require('../users/UserModel');
 const SensitivitySchema = new mongoose.Schema({
     userId: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'User' },
     allergen: { type: String },
-    level: { type: String, enum: ['light', 'moderate'] },
+    sensitivityLevel: { type: String, enum: ['light', 'moderate'] },
 });
 
 SensitivitySchema.pre('save', async function() {

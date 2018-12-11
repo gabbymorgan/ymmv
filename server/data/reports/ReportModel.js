@@ -6,24 +6,28 @@ const ReportSchema = new mongoose.Schema({
     productId: { type: mongoose.Schema.Types.ObjectId, ref: 'Product', required: true },
     userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
     sensitivityIds: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Sensitivity', required: true }],
+    sensitivities: { type: Object },
     details: { type: String, maxlength: 256 },
     reactionLevel: { type: Number, max: 5, required: true },
 });
 
-ReportSchema.statics.createRatings = async (report) => {
+ReportSchema.pre('save', async function() {
+    const foundSensitivities = await Sensitivity.find({ _id: { $in: this.sensitivityIds } });
+    this.sensitivities = foundSensitivities;
+    await this.updateAssociatedRatings();
+});
+
+ReportSchema.methods.updateAssociatedRatings = async function() {
     // update the associated ratings for that product
-    const foundSensitivities = await Sensitivity.find({ _id: { $in: report.sensitivityIds } });
-    const updateRatings = foundSensitivities.map(async (foundSensitivity) => {
-        const { level, allergen } = foundSensitivity;
-        const { productId } = report;
-        const rating = await Rating.findOne({ productId, allergen });
+    const updateRatings = this.sensitivities.map(async (sensitivity) => {
+        const { allergen, sensitivityLevel } = sensitivity;
+        const { productId, reactionLevel } = this;
+        let rating = await Rating.findOne({ productId, allergen });
         if (!rating) {
             newRating = new Rating({ productId, allergen });
-            await newRating.save();
+            rating = await newRating.save();
         }
-        else {
-            await rating.average(level);
-        }
+        await rating.updateData(this._id, reactionLevel, sensitivityLevel);
     });
     await Promise.all(updateRatings);
 }
