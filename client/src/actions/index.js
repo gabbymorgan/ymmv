@@ -1,7 +1,8 @@
 import { showSessionModal, hideSessionModal } from './modals';
 import { checkUsername, register, login, logout } from './user';
+import { searchCompanies } from './companies';
 import { searchProducts } from './products';
-import { getReports } from './reports';
+import { searchReports } from './reports';
 
 export {
   // MODALS
@@ -13,8 +14,9 @@ export {
   login,
   logout,
   // COMPANIES
+  searchCompanies,
   // PRODUCTS
   searchProducts,
   // REPORTS
-  getReports,
+  searchReports,
 }

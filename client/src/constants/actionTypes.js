@@ -7,9 +7,10 @@ const actionTypes = {
   GET_USERS: {},
   SEARCH_PRODUCTS: {},
   CREATE_PRODUCT: {},
-  GET_REPORTS: {},
+  SEARCH_REPORTS: {},
   CREATE_REPORT: {},
   UPDATE_REPORT: {},
+  SEARCH_COMPANIES: {},
 };
 
 Object.keys(actionTypes).forEach(type => {
