@@ -38,8 +38,8 @@ class SearchBar extends Component {
             >Product Name</Button>
             <Button
               color="primary"
-              active={this.state.queryType === 'company'}
-              onClick={() => this.handleQueryType('company')}
+              active={this.state.queryType === 'companyName'}
+              onClick={() => this.handleQueryType('companyName')}
             >Company Name</Button>
           </ButtonGroup>
           {
