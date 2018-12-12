@@ -53,6 +53,11 @@ class UserNav extends React.Component {
                 </Link>
               </NavItem>
               <NavItem>
+                <Link to='/me'>
+                    <div className="nav-link">Profile</div>
+                </Link>
+              </NavItem>
+              <NavItem>
                 <Link to='/'>
                     <div className="nav-link" onClick={() => this.props.logout() }>Sign Out</div>
                 </Link>

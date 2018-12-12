@@ -89,3 +89,10 @@ export const Card = styled(BSCard)`
 
 export const Link = styled(RRLink)`
 `;
+
+export const ContentHeading = styled(BSRow)`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+`;

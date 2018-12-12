@@ -1,6 +1,6 @@
 import React from 'react';
-import axios from 'axios';
 import { connect } from 'react-redux';
+import { Row } from 'reactstrap';
 
 import { Button, Modal, ModalHeader, ModalFooter } from '../styles';
 import { LoginModal, RegisterModal } from '../components';
@@ -74,26 +74,24 @@ class SessionModal extends React.Component {
 
   render() {
     return (
-      <div>
-        <Modal isOpen={this.props.showingSessionModal} toggle={this.toggle}>
-          <ModalHeader toggle={this.toggle}>
-            <h1>{this.state.modalTitle}</h1>
-            <Button color="primary" onClick={ this.toggleSelectedModal.bind(this) }>{this.state.cta}</Button>{' '}
-          </ModalHeader>
-          <ModalSelector selectedModal={this.state.selectedModal}/>
-          <ModalFooter>
-            <Button color="primary" onClick={() => this.toggle() }>nvm</Button>{' '}
-          </ModalFooter>
-        </Modal>
-      </div>
+      <Modal isOpen={this.props.showingSessionModal} toggle={this.toggle}>
+        <ModalHeader toggle={this.toggle}>
+          <h1>{this.state.modalTitle}</h1>
+          <Button color="primary" onClick={this.toggleSelectedModal.bind(this)}>{this.state.cta}</Button>{' '}
+        </ModalHeader>
+        <ModalSelector selectedModal={this.state.selectedModal} />
+        <ModalFooter>
+          <Button color="primary" onClick={() => this.toggle()}>nvm</Button>{' '}
+        </ModalFooter>
+      </Modal>
     );
   }
 }
 
 const ModalSelector = (props) => {
   return props.selectedModal === 'login'
-  ? <LoginModal/>
-  : <RegisterModal/>;
+    ? <LoginModal />
+    : <RegisterModal />;
 };
 
 const mapStateToProps = (state) => {
