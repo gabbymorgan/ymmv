@@ -8,16 +8,16 @@ import { Button } from '../styles';
 
 class CreateProduct extends Component {
 
-    handleSubmit = (e, action) => {
+    handleSubmit(e) {
         e.preventDefault();
         const product = {};
         Object.keys(this.state).forEach(key => {
             product[key] = this.state.key;
         });
-        this.props[action](product);
+        this.props.createProduct(product);
     };
 
-    handleChange = (e) => {
+    handleChange(e) {
         const { name, value } = e.target;
         if (this['validate' + name.toUpperCase()]) {
             this.setState({
@@ -27,24 +27,24 @@ class CreateProduct extends Component {
     }
 
     validateCOMPANYNAME() {
-
+        return true;
     }
 
     validateNAME() {
-
+        return true;
     }
 
     validateDESCRIPTION() {
-
+        return true;
     }
 
     render() {
         return (
             <Row>
-                <Form onSubmit={(e) => handleSubmit(e, 'createProduct')}>
-                    <Input name="companyName" placeholder="Company Name" onChange={(e) => handleChange(e)} />
-                    <Input name="name" placeholder="Product Name" onChange={(e) => handleChange(e)} />
-                    <Input name="description" placeholder="Description" onChange={(e) => handleChange(e)} />
+                <Form onSubmit={this.handleSubmit.bind(this)}>
+                    <Input name="companyName" placeholder="Company Name" onChange={this.handleChange.bind(this)} />
+                    <Input name="name" placeholder="Product Name" onChange={this.handleChange.bind(this)} />
+                    <Input name="description" placeholder="Description" onChange={this.handleChange.bind(this)} />
                     <Button>Save</Button>
                 </Form>
             </Row>

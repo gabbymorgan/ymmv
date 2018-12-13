@@ -8,16 +8,21 @@ import { SearchBarRow, SearchInput, SearchForm, Button, Link, ButtonGroup } from
 class SearchBar extends Component {
   state = {
     queryType: 'name',
+    string: '',
   }
 
   handleQueryString({ target }) {
     this.props.searchProducts(this.state.queryType, target.value);
+    this.setState({
+      string: target.value,
+    })
   }
 
   handleQueryType(queryType) {
     this.setState({
       queryType,
     });
+    this.props.searchProducts(queryType, this.state.string);
   }
 
   render() {

@@ -21,3 +21,20 @@ export const searchProducts = (queryType, string) => (dispatch) => {
       });
     });
 };
+
+export const createProduct = (product) => (dispatch) => {
+  dispatch({ type: actionTypes.CREATE_PRODUCT.IN_PROGRESS });
+  return axios
+    .post('products', product)
+    .then(response => {
+      dispatch({
+        type: actionTypes.CREATE_PRODUCT.SUCCESS,
+        searchResults: response.data
+      });
+    }).catch(error => {
+      dispatch({
+        type: actionTypes.CREATE_PRODUCT.ERROR,
+        error
+      });
+    });
+}
