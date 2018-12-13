@@ -8,17 +8,17 @@ import { Button } from '../styles';
 
 class CreateProduct extends Component {
 
-    handleSubmit = (action) => {
+    handleSubmit = (e, action) => {
+        e.preventDefault();
         const product = {};
         Object.keys(this.state).forEach(key => {
             product[key] = this.state.key;
         });
         this.props[action](product);
     };
-    
-    handleChange = (event) => {
-        event.preventDefault();
-        const { name, value } = event.target; ''.to
+
+    handleChange = (e) => {
+        const { name, value } = e.target;
         if (this['validate' + name.toUpperCase()]) {
             this.setState({
                 [name]: value
@@ -41,7 +41,7 @@ class CreateProduct extends Component {
     render() {
         return (
             <Row>
-                <Form onSubmit={() => handleSubmit('createProduct')}>
+                <Form onSubmit={(e) => handleSubmit(e, 'createProduct')}>
                     <Input name="companyName" placeholder="Company Name" onChange={(e) => handleChange(e)} />
                     <Input name="name" placeholder="Product Name" onChange={(e) => handleChange(e)} />
                     <Input name="description" placeholder="Description" onChange={(e) => handleChange(e)} />
