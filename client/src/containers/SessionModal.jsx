@@ -80,9 +80,6 @@ class SessionModal extends React.Component {
           <Button color="primary" onClick={this.toggleSelectedModal.bind(this)}>{this.state.cta}</Button>{' '}
         </ModalHeader>
         <ModalSelector selectedModal={this.state.selectedModal} />
-        <ModalFooter>
-          <Button color="primary" onClick={() => this.toggle()}>nvm</Button>{' '}
-        </ModalFooter>
       </Modal>
     );
   }

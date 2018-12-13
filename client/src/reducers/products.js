@@ -1,6 +1,8 @@
 import { actionTypes } from "../constants";
 
-const defaultState = {}
+const defaultState = {
+  products: [],
+}
 
 export default (state = defaultState, action) => {
   switch (action.type) {
