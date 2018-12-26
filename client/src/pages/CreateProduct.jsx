@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Row, Form, Input } from 'reactstrap';
+import { Row, Form, Input, Col } from 'reactstrap';
 
-import { createProduct } from '../actions';
+import { createProduct, searchCompanies } from '../actions';
 import { handleChange, handleSubmit } from '../constants/methods';
 import { Button } from '../styles';
+import productContract from '../contracts/ProductContract.js.json';
 
 class CreateProduct extends Component {
+    state = {
+        companies: [],
+    }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -19,15 +23,15 @@ class CreateProduct extends Component {
 
     handleChange(e) {
         const { name, value } = e.target;
-        if (this['validate' + name.toUpperCase(value)]) {
+        if (this['validate' + name.toUpperCase()](value)) {
             this.setState({
                 [name]: value
             });
         }
     }
 
-    validateCOMPANYNAME(value) {
-        const validators
+    validateCOMPANYNAME = async (value) => {
+        await this.props.searchCompanies('name', value);
         return true;
     }
 
@@ -42,19 +46,31 @@ class CreateProduct extends Component {
     render() {
         return (
             <Row>
-                <Form onSubmit={this.handleSubmit.bind(this)}>
-                    <Input name="companyName" placeholder="Company Name" onChange={this.handleChange.bind(this)} />
-                    <Input name="name" placeholder="Product Name" onChange={this.handleChange.bind(this)} />
-                    <Input name="description" placeholder="Description" onChange={this.handleChange.bind(this)} />
-                    <Button>Save</Button>
-                </Form>
+                <Col xs="6">
+                    <Form onSubmit={this.handleSubmit.bind(this)}>
+                        {
+                            Object.keys(productContract).map(field => {
+                                if (!productContract[field].inputType) return null;
+                                return <Input key={field} name={field} placeholder={field} onChange={this.handleChange.bind(this)}/>;
+                            })
+                        }
+                        <Button>Save</Button>
+                    </Form>
+                </Col>
+                <Col xs="6">
+                    {
+                        this.props.companies.map(company => {
+                            return <p key={company.name}>{company.name}</p>
+                        })
+                    }
+                </Col>
             </Row>
         );
     }
 }
 
 const mapStateToProps = state => ({
-    similarCompanies: state.products.similarCompanies,
+    companies: state.companies.searchResults,
 });
 
-export default connect(mapStateToProps, { createProduct })(CreateProduct);
+export default connect(mapStateToProps, { createProduct, searchCompanies })(CreateProduct);

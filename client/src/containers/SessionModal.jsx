@@ -76,7 +76,7 @@ class SessionModal extends React.Component {
     return (
       <Modal isOpen={this.props.showingSessionModal} toggle={this.toggle}>
         <ModalHeader toggle={this.toggle}>
-          <h1>{this.state.modalTitle}</h1>
+          {this.state.modalTitle}
           <Button color="primary" onClick={this.toggleSelectedModal.bind(this)}>{this.state.cta}</Button>{' '}
         </ModalHeader>
         <ModalSelector selectedModal={this.state.selectedModal} />

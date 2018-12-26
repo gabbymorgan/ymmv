@@ -1,0 +1,1 @@
+{"userId":{"required":true,"ref":"User"},"allergen":{"inputType":"text"},"sensitivityLevel":{"enum":["light","moderate"],"inputType":"select"}}

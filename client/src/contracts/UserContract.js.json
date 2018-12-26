@@ -1,0 +1,1 @@
+{"firstName":{"maxlength":64,"inputType":"text"},"lastName":{"maxlength":64,"inputType":"text"},"email":{"required":true,"inputType":"email"},"description":{"maxlength":256,"inputType":"textarea"},"sensitivityIds":[{"ref":"Sensitivity"}],"password":{"minlength":8,"required":true,"inputType":"password"},"signUpDate":{}}

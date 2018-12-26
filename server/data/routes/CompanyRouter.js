@@ -1,6 +1,5 @@
 const express = require('express');
-
-const Company = require('../models/CompanyModel');
+const Company = require('../models/Company');
 
 const router = express.Router();
 
@@ -12,9 +11,9 @@ router
       return res.status(422).json({ message: "Invalid query. User can only GET by 'name' or 'companyName'."})
     }
     Company
-      .findOne({ [queryType]: new RegExp('.*'+string+'.*', "i") })
-      .then(company => {
-        res.status(200).json(company);
+      .find({ [queryType]: new RegExp('.*'+string+'.*', "i") })
+      .then(companies => {
+        res.status(200).json(companies);
       }).catch(err => res.status(500).json({ message: err.message }));
   })
   .post('/', (req, res) => {

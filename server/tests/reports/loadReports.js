@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const fs = require('fs');
 
-const Product = require('../../data/products/ProductModel');
-const Report = require('../../data/reports/ReportModel');
-const User = require('../../data/users/UserModel');
+const Product = require('../../data/models/Product');
+const Report = require('../../data/models/Report');
+const User = require('../../data/models/User');
 
 const reportsData = JSON.parse(fs.readFileSync('./server/tests/reports/reports.json'));
 

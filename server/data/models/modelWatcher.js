@@ -1,10 +1,11 @@
 const fs = require('fs');
 
-fs.readdir('./server/data/models/', async (err, paths) => {
-  if (err) console.log(err);
-  const updateClientFiles = paths.map(async (path) => {
-    const file = await fs.readFile(`./server/data/models/${path}`)
-    await fs.writeFile(`../../../client/src/constants/models${path}`, file);
-  });
-  await Promise.all(updateClientFiles);
+fs.readdir('./server/data/contracts/', function (err, paths) {
+    paths.forEach(async (path) => {
+      if (path !== 'modelWatcher.js') {
+        const contract = require(`../contracts/${path}`);
+        const contractString = JSON.stringify(contract);
+        fs.writeFileSync(`./client/src/contracts/${path}.json`, contractString);
+      }
+    });
 });

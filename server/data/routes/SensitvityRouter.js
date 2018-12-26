@@ -1,7 +1,6 @@
 const express = require('express');
-
-const Sensitivity = require('../models/SensitivityModel');
-const User = require('../models/UserModel');
+const Sensitivity = require('../models/Sensitivity');
+const User = require('../models/User');
 
 const router = express.Router();
 

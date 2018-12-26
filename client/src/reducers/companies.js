@@ -1,17 +1,17 @@
 import { actionTypes } from "../constants";
 
 const defaultState = {
-  products: [],
+  searchResults: [],
 }
 
 export default (state = defaultState, action) => {
   switch (action.type) {
-    case actionTypes.SEARCH_PRODUCTS.IN_PROGRESS:
+    case actionTypes.SEARCH_COMPANIES.IN_PROGRESS:
       return {
         ...state,
         inProgress: true,
       }
-    case actionTypes.SEARCH_PRODUCTS.SUCCESS:
+    case actionTypes.SEARCH_COMPANIES.SUCCESS:
       return {
         ...state,
         inProgress: false,

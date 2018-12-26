@@ -1,0 +1,1 @@
+{"name":{"required":true,"maxLength":128,"index":true,"inputType":"text"},"company":{"ref":"Company","required":true},"companyName":{"required":true,"maxLength":128,"inputType":"text"},"description":{"required":true,"maxlength":256,"inputType":"textarea"},"ingredients":[{"maxlength":64,"inputType":"text"}],"ratingIds":{"ref":"Rating"},"imgUrl":{"validate":{},"inputType":"url"}}

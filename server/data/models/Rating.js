@@ -1,20 +1,9 @@
 const mongoose = require('mongoose');
-const Product = require('./ProductModel');
+const Product = require('./Product');
 
-const RatingSchema = new mongoose.Schema({
-    productId: { type: mongoose.Schema.Types.ObjectId, ref: 'Product' },
-    allergen: { type: String },
-    light: {
-        sum: { type: Number, defult: 0 },
-        sampleSize: { type: Number, default: 0 },
-        average: { type: Number, max: 5, default: 0 },
-    },
-    moderate: {
-        sum: { type: Number, defult: 0 },
-        sampleSize: { type: Number, default: 0 },
-        average: { type: Number, max: 5, default: 0 },
-    },
-});
+const RatingContract = require('../contracts/RatingContract');
+
+const RatingSchema = new mongoose.Schema(RatingContract);
 
 RatingSchema.pre('save', async function () {
     const product = await Product.findById(this.productId);

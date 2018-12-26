@@ -1,15 +1,9 @@
 const mongoose = require('mongoose');
-const Sensitivity = require('./SensitivityModel');
-const Rating = require('./RatingModel');
+const Sensitivity = require('./Sensitivity');
+const Rating = require('./Rating');
+const ReportContract = require('../contracts/ReportContract');
 
-const ReportSchema = new mongoose.Schema({
-    productId: { type: mongoose.Schema.Types.ObjectId, ref: 'Product', required: true },
-    userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-    sensitivityIds: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Sensitivity', required: true }],
-    sensitivities: { type: Object },
-    details: { type: String, maxlength: 256 },
-    reactionLevel: { type: Number, max: 5, required: true },
-});
+const ReportSchema = new mongoose.Schema(ReportContract);
 
 ReportSchema.pre('save', async function() {
     const foundSensitivities = await Sensitivity.find({ _id: { $in: this.sensitivityIds } });
