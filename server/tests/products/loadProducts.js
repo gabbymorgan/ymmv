@@ -18,7 +18,11 @@ mongoose
     const loadCompanies = companies.map(async (company, index) => {
       const product = products[index];
       const truncatedDescription = product.description.slice(0, 255);
-      fixedProduct = Object.assign(product, { description: truncatedDescription, company: company._id })
+      const randomDimenion = () => Math.trunc(Math.random() * 100) * 10;
+      const randomWidth = randomDimenion();
+      const randomHeight = randomDimenion();
+      const imgUrl = `https://picsum.photos/${randomWidth}/${randomHeight}`
+      fixedProduct = Object.assign(product, { description: truncatedDescription, imgUrl, company: company._id })
       newProduct = new Product(product);
       await newProduct.save();
     });

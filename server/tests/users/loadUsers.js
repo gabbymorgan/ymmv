@@ -13,12 +13,13 @@ mongoose
   .connect(dbUrl)
   .then(async () => {
     console.log('\n=== Connected to MongoDB ===\n');
-    await users.forEach(user => {
+    const loadUsers = users.map(async (user) => {
       const truncatedDescription = user.description.slice(0, 255);
       fixedUser = Object.assign(user, { description: truncatedDescription })
       newUser = new User(user);
-      newUser.save();
+      await newUser.save();
     });
+    await Promise.all(loadUsers);
     mongoose.disconnect();
   })
   .catch(err => console.log('database conection failed', err));

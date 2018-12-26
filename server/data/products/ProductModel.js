@@ -9,6 +9,14 @@ const ProductSchema = new mongoose.Schema({
     description: { type: String, required: true, maxlength: 256 },
     ingredients: [{ type: String, maxlength: 64 }],
     ratingIds: { type: mongoose.Schema.Types.ObjectId, ref: 'Rating' },
+    imgUrl: {
+        type: String,
+        validate: {
+            validator: function(url) {
+                return /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,15}(:[0-9]{1,5})?(\/.*)?$/.test(url);
+            }
+        }
+    }
 });
 
 ProductSchema.pre('save', async function() {
