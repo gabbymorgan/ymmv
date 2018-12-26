@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const fs = require('fs');
 
-const User = require('../../data/users/UserModel');
+const User = require('../../data/models/UserModel');
 
 const users = JSON.parse(fs.readFileSync('./server/tests/users/users.json'));
 const dbUrl = process.env.NODE_ENV === 'production'

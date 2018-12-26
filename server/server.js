@@ -9,11 +9,11 @@ const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
 
 // local files
-const UserRouter = require('./data/users/UserRouter');
-const ProductRouter = require('./data/products/ProductRouter');
-const ReportRouter = require('./data/reports/ReportRouter');
-const CompanyRouter = require('./data/companies/CompanyRouter');
-const SensitivityRouter = require('./data/sensitivities/SensitvityRouter');
+const UserRouter = require('./data/routes/UserRouter');
+const ProductRouter = require('./data/routes/ProductRouter');
+const ReportRouter = require('./data/routes/ReportRouter');
+const CompanyRouter = require('./data/routes/CompanyRouter');
+const SensitivityRouter = require('./data/routes/SensitvityRouter');
 
 const server = express();
 

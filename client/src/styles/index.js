@@ -12,12 +12,13 @@ import {
   Form as BSForm,
   Label as BSLabel,
   Card as BSCard,
+  CardImg as BSCardImg,
   Button as BSButton,
   Row as BSRow,
+  Col as BSCol
 } from 'reactstrap';
 
 import { colors } from '../constants/theme';
-
 
 import styled from 'styled-components';
 
@@ -82,10 +83,16 @@ export const Label = styled(BSLabel)`
   margin: 1rem 0 0 0;
 `;
 
+export const ResultContainer = styled.div`
+`
+
 export const Card = styled(BSCard)`
-  height: 35em;
   margin-bottom: 1rem;
 `;
+
+export const CardImg = styled(BSCardImg)`
+  max-height: 600px;
+`
 
 export const Link = styled(RRLink)`
 `;

@@ -19,22 +19,23 @@ class CreateProduct extends Component {
 
     handleChange(e) {
         const { name, value } = e.target;
-        if (this['validate' + name.toUpperCase()]) {
+        if (this['validate' + name.toUpperCase(value)]) {
             this.setState({
                 [name]: value
             });
         }
     }
 
-    validateCOMPANYNAME() {
+    validateCOMPANYNAME(value) {
+        const validators
         return true;
     }
 
-    validateNAME() {
+    validateNAME(value) {
         return true;
     }
 
-    validateDESCRIPTION() {
+    validateDESCRIPTION(value) {
         return true;
     }
 
