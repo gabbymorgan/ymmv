@@ -1,1 +1,0 @@
-{"name":{"required":true,"maxLength":128,"inputType":"text"},"description":{"required":true,"maxLength":256,"inputType":"textarea"},"email":{"fieldType":"email"},"url":{"validate":{}},"products":[{"ref":"Product"}]}
