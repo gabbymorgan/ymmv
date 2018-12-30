@@ -16,8 +16,6 @@ paths.forEach(path => {
 
 fs.writeFileSync('./client/src/contracts/index.js', importString + '\n' + exportString + '}');
 
-
-// experimental model for functional input rendering mixed with OOP for styles inherintance
 // passes values straight from DB Contracts to UI HOC via Styled Components.
 
 const contracts = {};
@@ -29,14 +27,17 @@ paths.forEach(path => {
 });
 
 Object.keys(contracts).forEach(contractName => {
-  styledContracts += `// ---- ${contractName} ----\n\n`
+  styledContracts += `export const ${contractName} = {};\n\n`
   const contract = contracts[contractName];
   Object.keys(contract).forEach(fieldName => {
     const field = contract[fieldName];
     if (field.inputType) {
-      styledContracts += `export const ${fieldName} = styled.input\`\n\`;\n\n`;
+      styledContracts += `${contractName}.${fieldName} = styled.input\`\n\`;\n\n`;
     }
   });
 });
 
 fs.writeFileSync(`./client/src/styles/inputComponents.js`, styledContracts);
+
+// generate CRUD operations for BE
+// generate CRUD operations for FE

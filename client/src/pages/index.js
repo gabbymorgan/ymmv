@@ -1,6 +1,6 @@
 import Main from './Main';
 import MyProfile from './MyProfile';
-import CreateProduct from './CreateProduct';
+import CreateProduct from '../templates/CreateDocument';
 
 export {
   Main,

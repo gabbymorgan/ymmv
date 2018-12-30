@@ -1,59 +1,59 @@
 import styled from 'styled-components';
 
-// ---- Company ----
+export const Company = {};
 
-export const name = styled.input`
+Company.name = styled.input`
 `;
 
-export const description = styled.input`
+Company.description = styled.input`
 `;
 
-// ---- Product ----
+export const Product = {};
 
-export const name = styled.input`
+Product.name = styled.input`
 `;
 
-export const companyName = styled.input`
+Product.companyName = styled.input`
 `;
 
-export const description = styled.input`
+Product.description = styled.input`
 `;
 
-export const imgUrl = styled.input`
+Product.imgUrl = styled.input`
 `;
 
-// ---- Rating ----
+export const Rating = {};
 
-// ---- Report ----
+export const Report = {};
 
-export const details = styled.input`
+Report.details = styled.input`
 `;
 
-export const reactionLevel = styled.input`
+Report.reactionLevel = styled.input`
 `;
 
-// ---- Sensitivity ----
+export const Sensitivity = {};
 
-export const allergen = styled.input`
+Sensitivity.allergen = styled.input`
 `;
 
-export const sensitivityLevel = styled.input`
+Sensitivity.sensitivityLevel = styled.input`
 `;
 
-// ---- User ----
+export const User = {};
 
-export const firstName = styled.input`
+User.firstName = styled.input`
 `;
 
-export const lastName = styled.input`
+User.lastName = styled.input`
 `;
 
-export const email = styled.input`
+User.email = styled.input`
 `;
 
-export const description = styled.input`
+User.description = styled.input`
 `;
 
-export const password = styled.input`
+User.password = styled.input`
 `;
 
