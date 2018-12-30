@@ -20,7 +20,7 @@ fs.writeFileSync('./client/src/contracts/index.js', importString + '\n' + export
 
 const contracts = {};
 let styledContracts = "import styled from 'styled-components';\n\n";
-styledContracts += "import {BaseInput} from './';\n\n";
+styledContracts += "import {DataInput} from './';\n\n";
 
 paths.forEach(path => {
   const contractName = path.slice(0, path.length - 8);
@@ -33,7 +33,7 @@ Object.keys(contracts).forEach(contractName => {
   Object.keys(contract).forEach(fieldName => {
     const field = contract[fieldName];
     if (field.inputType) {
-      styledContracts += `${contractName}.${fieldName} = styled(BaseInput)\`\n\`;\n\n`;
+      styledContracts += `${contractName}.${fieldName} = styled(DataInput)\`\n\`;\n\n`;
     }
   });
 });

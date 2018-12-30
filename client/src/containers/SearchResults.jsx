@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Row } from 'reactstrap';
+import { Row } from '../styles';
 
 import { Result } from '../components';
 

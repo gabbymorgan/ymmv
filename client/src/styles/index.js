@@ -15,7 +15,7 @@ import {
   CardImg as BSCardImg,
   Button as BSButton,
   Row as BSRow,
-  Col as BSCol
+  Col as BSCol,
 } from 'reactstrap';
 
 import { colors } from '../constants/theme';
@@ -27,6 +27,13 @@ export const Container = styled(BSContainer)`
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
+`;
+
+export const Row = styled(BSRow)`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Modal = styled(BSModal)`
@@ -68,8 +75,8 @@ export const SearchForm = styled(BSForm)`
 export const Input = styled(BSInput)`
 `;
 
-export const BaseInput = styled(BSInput)`
-  width: 100%;
+export const DataInput = styled(BSInput)`
+  margin: 1rem 0 0 0;
 `;
 
 export const SearchInput = styled(BSInput)`

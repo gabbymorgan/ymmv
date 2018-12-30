@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row } from 'reactstrap';
+import { Row } from '../styles';
 import { Route } from 'react-router-dom';
 
 import { Main, CreateProduct, MyProfile } from '../pages';

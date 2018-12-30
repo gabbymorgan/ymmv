@@ -50,8 +50,9 @@ class CreateOrUpdateDoc extends Component {
     } = this.props;
     const contract = contracts[docType + 'Contract'];
     return (
+      <Col xs="6">
       <Row>
-        <Form onSubmit={this.handleSubmit.bind(this)}>
+        <Form style={{width: "100%"}} onSubmit={this.handleSubmit.bind(this)}>
           {
             Object.keys(contract).map(fieldName => {
               if (!contract[fieldName].inputType) return null;
@@ -66,8 +67,10 @@ class CreateOrUpdateDoc extends Component {
             })
           }
           <Button>Submit</Button>
-        </Form>
+        </Form>          
       </Row>
+    
+      </Col>
     );
   }
 }

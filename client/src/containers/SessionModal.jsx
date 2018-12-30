@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Row } from 'reactstrap';
+import { Row } from '../styles';
 
 import { Button, Modal, ModalHeader, ModalFooter } from '../styles';
 import { LoginModal, RegisterModal } from '../components';
