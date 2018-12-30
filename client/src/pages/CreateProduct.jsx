@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CreateOrUpdateDoc from './CreateOrUpdateDoc';
+import CreateOrUpdateDoc from '../templates/CreateOrUpdateDoc';
 
 class Search extends Component {
   render() {

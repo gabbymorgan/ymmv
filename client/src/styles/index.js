@@ -68,6 +68,10 @@ export const SearchForm = styled(BSForm)`
 export const Input = styled(BSInput)`
 `;
 
+export const BaseInput = styled(BSInput)`
+  width: 100%;
+`;
+
 export const SearchInput = styled(BSInput)`
 `;
 

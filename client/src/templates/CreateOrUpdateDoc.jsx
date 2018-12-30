@@ -11,7 +11,8 @@ import * as inputComponents from '../styles/inputComponents';
 let reduxProps = [];
 let docType = '';
 
-class CreateProduct extends Component {
+class CreateOrUpdateDoc extends Component {
+  state = {}
 
   componentDidMount() {
     docType = this.props.docType;
@@ -19,16 +20,6 @@ class CreateProduct extends Component {
       reduxProps.push(field);
     });
   }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    const document = {};
-    const actionBase = this.props.isNew ? 'create' : 'update';
-    Object.keys(this.state).forEach(key => {
-      document[key] = this.state.key;
-    });
-    this.props[actionBase + this.props.docType](document);
-  };
 
   handleChange(e) {
     const { name, value } = e.target;
@@ -39,6 +30,16 @@ class CreateProduct extends Component {
     }
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    const document = {};
+    const actionBase = this.props.isNew ? 'create' : 'update';
+    Object.keys(this.state).forEach(key => {
+      document[key] = this.state[key];
+    });
+    this.props[actionBase + this.props.docType](document);
+  };
+
   validator = async (name, value) => {
     return true;
   }
@@ -46,7 +47,6 @@ class CreateProduct extends Component {
   render() {
     const {
       docType,
-      isNew,
     } = this.props;
     const contract = contracts[docType + 'Contract'];
     return (
@@ -57,7 +57,7 @@ class CreateProduct extends Component {
               if (!contract[fieldName].inputType) return null;
               const Element = inputComponents[docType][fieldName];
               return <Element
-                value={isNew ? null : this.props[fieldName]}
+                value={this.state[fieldName] || this.props[fieldName] || ''}
                 key={fieldName}
                 name={fieldName}
                 placeholder={fieldName}
@@ -72,9 +72,10 @@ class CreateProduct extends Component {
   }
 }
 
-CreateProduct.proptypes = {
+CreateOrUpdateDoc.proptypes = {
   isNew: proptypes.bool,
   docType: proptypes.string,
+  validator: proptypes.object,
 };
 
 const mapStateToProps = state => {
@@ -85,4 +86,4 @@ const mapStateToProps = state => {
   return newProps;
 };
 
-export default connect(mapStateToProps, { ...actions })(CreateProduct);
+export default connect(mapStateToProps, { ...actions })(CreateOrUpdateDoc);
