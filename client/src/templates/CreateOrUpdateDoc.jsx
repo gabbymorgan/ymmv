@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Row, Form, Input, Col } from 'reactstrap';
+import { FormFeedback, FormText } from 'reactstrap';
 import proptypes from 'prop-types';
 
 import * as actions from '../actions';
-import { Button } from '../styles';
+import { Button, Label, Row, Form, Input, Col } from '../styles';
 import * as contracts from '../contracts';
+import * as validators from '../contracts/validators';
 import * as inputComponents from '../styles/inputComponents';
 
 let reduxProps = [];
@@ -21,13 +22,23 @@ class CreateOrUpdateDoc extends Component {
     });
   }
 
-  handleChange(e) {
+  handleChange = async (e) => {
     const { name, value } = e.target;
-    if (this.validator(name, value)) {
+    const validation = await this.callValidator(name, value);
+    if (validation.success) {
       this.setState({
         [name]: value
       });
     }
+    this.setState({
+      [name + 'Error']: validation.error,
+    });
+  }
+
+  callValidator = async (name, value) => {
+    const validator = validators[name];
+    return validator ? validator(value)
+      : { success: true, error: '' };
   }
 
   handleSubmit(e) {
@@ -40,10 +51,6 @@ class CreateOrUpdateDoc extends Component {
     this.props[actionBase + this.props.docType](document);
   };
 
-  validator = async (name, value) => {
-    return true;
-  }
-
   render() {
     const {
       docType,
@@ -51,25 +58,35 @@ class CreateOrUpdateDoc extends Component {
     const contract = contracts[docType + 'Contract'];
     return (
       <Col xs="6">
-      <Row>
-        <Form style={{width: "100%"}} onSubmit={this.handleSubmit.bind(this)}>
-          {
-            Object.keys(contract).map(fieldName => {
-              if (!contract[fieldName].inputType) return null;
-              const Element = inputComponents[docType][fieldName];
-              return <Element
-                value={this.state[fieldName] || this.props[fieldName] || ''}
-                key={fieldName}
-                name={fieldName}
-                placeholder={fieldName}
-                onChange={this.handleChange.bind(this)}
-              />;
-            })
-          }
-          <Button>Submit</Button>
-        </Form>          
-      </Row>
-    
+        <Row>
+          <Form style={{ width: "100%" }} onSubmit={this.handleSubmit.bind(this)}>
+            {
+              Object.keys(contract).map(fieldName => {
+                if (!contract[fieldName].inputType) return null;
+                const Element = inputComponents[docType][fieldName];
+                const valid = this.state[fieldName] && !this.props[fieldName + 'Error'];
+                const invalid = !valid && this.state[fieldName];
+                return (
+                  <div key={docType + '_' + fieldName}>
+                    <Label for={fieldName}>{fieldName.split(/(?=[A-Z])/).join(' ').toLowerCase()}</Label>
+                    <Element
+                      value={this.state[fieldName] || this.props[fieldName] || ''}
+                      valid={valid}
+                      invalid={invalid}
+                      key={fieldName}
+                      name={fieldName}
+                      placeholder={fieldName}
+                      onChange={this.handleChange.bind(this)}
+                    />
+                    <FormFeedback valid>Good to go!</FormFeedback>
+                    <FormFeedback invalid>{this.state[fieldName + 'Error']}</FormFeedback>
+                  </div>
+                )
+              })
+            }
+            <Button>Submit</Button>
+          </Form>
+        </Row>
       </Col>
     );
   }

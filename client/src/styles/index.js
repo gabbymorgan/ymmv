@@ -29,6 +29,8 @@ export const Container = styled(BSContainer)`
   flex-flow: column nowrap;
 `;
 
+export const Col = styled(BSCol)``;
+
 export const Row = styled(BSRow)`
   display: flex;
   flex-flow: row wrap;
@@ -53,6 +55,7 @@ export const ModalFooter = styled(BSModalFooter)`
 
 export const Button = styled(BSButton)`
   background: ${colors.tertiary};
+  margin: 1rem 0 0 0;
 `;
 
 export const Form = styled(BSForm)`

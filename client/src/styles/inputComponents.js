@@ -10,6 +10,9 @@ Company.name = styled(DataInput)`
 Company.description = styled(DataInput)`
 `;
 
+Company.email = styled(DataInput)`
+`;
+
 export const Product = {};
 
 Product.name = styled(DataInput)`

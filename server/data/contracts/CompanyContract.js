@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 module.exports = {
   name: { type: String, maxLength: 128, inputType: 'text' },
   description: { type: String, maxLength: 256, inputType: 'textarea' },
-  email: { type: String, fieldType: 'email' },
+  email: { type: String, inputType: 'email' },
   url: {
       type: String,
       validate: {

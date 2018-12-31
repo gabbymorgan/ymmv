@@ -7,7 +7,7 @@ module.exports = {
   description: { type: String, required: true, maxlength: 256, inputType: 'textarea' },
   ingredients: [{ type: String, maxlength: 64, inputType: 'text' }],
   ratingIds: { type: mongoose.Schema.Types.ObjectId, ref: 'Rating' },
-  imgUrl: {
+  imageUrl: {
       type: String,
       validate: {
           validator: function(url) {

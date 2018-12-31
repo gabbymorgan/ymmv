@@ -2,14 +2,20 @@ import React, { Component } from 'react';
 import { Row } from '../styles';
 import { Route } from 'react-router-dom';
 
-import { Main, CreateProduct, MyProfile } from '../pages';
+import { Main, MyProfile } from '../pages';
+import { FormComponents } from '../components';
 
 export default () => {
   return (
     <Row>
       <Route exact path='/' component={ Main } />
       <Route path='/me' component={ MyProfile } />
-      <Route exact path='/create/product' component={ CreateProduct } />
+      {
+        Object.keys(FormComponents).map(componentName => {
+          const Component = FormComponents[componentName];
+          return <Route key={componentName} exact path={`/{componentName}`} component={Component} />
+        })
+      }
     </Row>
   );
 }
