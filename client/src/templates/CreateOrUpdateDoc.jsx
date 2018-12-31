@@ -24,19 +24,17 @@ class CreateOrUpdateDoc extends Component {
 
   handleChange = async (e) => {
     const { name, value } = e.target;
+    console.log(name,value);
     const validation = await this.callValidator(name, value);
-    if (validation.success) {
-      this.setState({
-        [name]: value
-      });
-    }
     this.setState({
+      [name]: value,
       [name + 'Error']: validation.error,
     });
   }
 
   callValidator = async (name, value) => {
     const validator = validators[name];
+    if (validator) console.log(validator(value));
     return validator ? validator(value)
       : { success: true, error: '' };
   }
