@@ -13,7 +13,7 @@ export default () => {
       {
         Object.keys(FormComponents).map(componentName => {
           const Component = FormComponents[componentName];
-          return <Route key={componentName} exact path={`/{componentName}`} component={Component} />
+          return <Route key={componentName} exact path={`/${componentName}`} component={Component} />
         })
       }
     </Row>
