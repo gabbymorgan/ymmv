@@ -78,8 +78,14 @@ export const SearchForm = styled(BSForm)`
 export const Input = styled(BSInput)`
 `;
 
+export const DataInputGroup = styled(BSInputGroup)`
+`;
+
 export const DataInput = styled(BSInput)`
   margin: 1rem 0 0 0;
+`;
+
+export const DataLabel = styled(BSLabel)`
 `;
 
 export const SearchInput = styled(BSInput)`
@@ -88,6 +94,7 @@ export const SearchInput = styled(BSInput)`
 export const InputGroup = styled(BSInputGroup)`
   width: 100%;
 `;
+
 
 export const ButtonGroup = styled(BSButtonGroup)`
   margin: 1rem 0 0 0;
@@ -116,4 +123,21 @@ export const ContentHeading = styled(BSRow)`
   flex-flow: row wrap;
   justify-content: center;
   text-align: center;
+`;
+
+export const AutoCompleteContainer = styled.div`
+  width: 73%;
+  border: solid 1px gray;
+  background: white;
+  position: absolute;
+  z-index: 5;
+  top: 3rem;
+  left: 27%;
+`;
+
+export const AutoCompleteItem = styled.div`
+  &:hover {
+    cursor: pointer;
+    background: #555;
+  }
 `;

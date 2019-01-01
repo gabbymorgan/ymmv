@@ -1,6 +1,6 @@
 import { showSessionModal, hideSessionModal } from './modals';
 import { checkUsername, register, login, logout } from './user';
-import { searchCompanies } from './companies';
+import { search_companies } from './companies';
 import { searchProducts, createProduct } from './products';
 import { searchReports } from './reports';
 
@@ -14,7 +14,7 @@ export {
   login,
   logout,
   // COMPANIES
-  searchCompanies,
+  search_companies,
   // PRODUCTS
   searchProducts,
   createProduct,

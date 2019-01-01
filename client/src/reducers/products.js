@@ -1,7 +1,7 @@
 import { actionTypes } from "../constants";
 
 const defaultState = {
-  products: [],
+  searchResults: [],
 }
 
 export default (state = defaultState, action) => {

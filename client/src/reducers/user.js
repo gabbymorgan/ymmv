@@ -3,6 +3,7 @@ import actionTypes from '../constants/actionTypes';
 const defaultState = {
   isLoggedIn: false,
   profile: {},
+  searchResults: [],
 };
 
 export default (state = defaultState, action) => {

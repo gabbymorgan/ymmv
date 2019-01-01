@@ -24,7 +24,7 @@ Product.companyName = styled(DataInput)`
 Product.description = styled(DataInput)`
 `;
 
-Product.imgUrl = styled(DataInput)`
+Product.imageUrl = styled(DataInput)`
 `;
 
 export const Rating = {};

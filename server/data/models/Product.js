@@ -6,9 +6,11 @@ const ProductContract = require('../contracts/ProductContract');
 const ProductSchema = new mongoose.Schema(ProductContract);
 
 ProductSchema.pre('save', async function() {
-    const company = await Company.findById(this.company);
-    this.companyName = company.name;
-    company.products.push(this._id);
+    console.log(this.companyName)
+    const company = await Company.findOne({name: this.companyName});
+    console.log(company);
+    this.companyId = company._id;
+    company.productIds.push(this._id);
     await company.save();
 });
 

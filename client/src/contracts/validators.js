@@ -5,7 +5,7 @@ const numbers = '(?=.*[0-9])';
 const specialChars = '(?=.[!@#\$%\^&])';
 
 // validators
-export const password = (string) => {
+export const complex = (string) => {
   const isComplex = new RegExp(lowerCase + upperCase + numbers + specialChars);
   if (isComplex.test(string)) {
     return {

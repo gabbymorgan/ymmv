@@ -1,34 +1,34 @@
 import React, { Component } from 'react';
-import CreateOrUpdateDoc from '../templates/CreateOrUpdateDoc';
+import FormComponent from '../templates/FormComponent';
 
 export const CreateProduct = () => (
-  <CreateOrUpdateDoc docType="Product" isNew />
+  <FormComponent docType="Product" isNew />
 );
 
 export const CreateUser = () => (
-  <CreateOrUpdateDoc docType="User" isNew />
+  <FormComponent docType="User" isNew />
 );
 
 export const CreateCompany = () => (
-  <CreateOrUpdateDoc docType="Company" isNew />
+  <FormComponent docType="Company" isNew />
 );
 
 export const CreateReport = () => (
-  <CreateOrUpdateDoc docType="Report" isNew />
+  <FormComponent docType="Report" isNew />
 );
 
 export const UpdateProduct = () => (
-  <CreateOrUpdateDoc docType="Product" isNew />
+  <FormComponent docType="Product" isNew={false} />
 );
 
 export const UpdateUser = () => (
-  <CreateOrUpdateDoc docType="User" isNew />
+  <FormComponent docType="User" isNew={false} />
 );
 
 export const UpdateCompany = () => (
-  <CreateOrUpdateDoc docType="Company" isNew />
+  <FormComponent docType="Company" isNew={false} />
 );
 
 export const UpdateReport = () => (
-  <CreateOrUpdateDoc docType="Report" isNew />
+  <FormComponent docType="Report" isNew={false} />
 );

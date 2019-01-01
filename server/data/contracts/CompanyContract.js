@@ -13,6 +13,6 @@ module.exports = {
           message: props => `${props.value} is not a valid url!`
       },
   },
-  products: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }],
+  productIds: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }],
 };
 
