@@ -24,6 +24,9 @@ Product.companyName = styled(DataInput)`
 Product.description = styled(DataInput)`
 `;
 
+Product.ingredients = styled(DataInput)`
+`;
+
 Product.imageUrl = styled(DataInput)`
 `;
 

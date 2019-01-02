@@ -31,7 +31,8 @@ Object.keys(contracts).forEach(contractName => {
   styledContracts += `export const ${contractName} = {};\n\n`
   const contract = contracts[contractName];
   Object.keys(contract).forEach(fieldName => {
-    const field = contract[fieldName];
+    let field = contract[fieldName];
+    if (Array.isArray(field)) field = { ...field[0] }
     if (field.inputType) {
       styledContracts += `${contractName}.${fieldName} = styled(DataInput)\`\n\`;\n\n`;
     }

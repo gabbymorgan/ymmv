@@ -1,1 +1,38 @@
-{"name":{"required":true,"maxLength":128,"index":true,"inputType":"text"},"companyId":{"ref":"Company","required":true},"companyName":{"maxLength":128,"inputType":"text","search":{"collection":"companies","subField":"name"}},"description":{"required":true,"maxlength":256,"inputType":"textarea"},"ingredients":[{"maxlength":64,"inputType":"text"}],"ratingIds":{"ref":"Rating"},"imageUrl":{"validate":{},"inputType":"url"}}
+{
+    "name": {
+        "required": true,
+        "maxLength": 128,
+        "index": true,
+        "inputType": "text"
+    },
+    "companyId": {
+        "ref": "Company",
+        "required": true
+    },
+    "companyName": {
+        "maxLength": 128,
+        "inputType": "text",
+        "search": {
+            "collection": "companies",
+            "subField": "name"
+        }
+    },
+    "description": {
+        "required": true,
+        "maxlength": 256,
+        "inputType": "textarea"
+    },
+    "ingredients": [
+        {
+            "maxlength": 64,
+            "inputType": "text"
+        }
+    ],
+    "ratingIds": {
+        "ref": "Rating"
+    },
+    "imageUrl": {
+        "validate": {},
+        "inputType": "url"
+    }
+}

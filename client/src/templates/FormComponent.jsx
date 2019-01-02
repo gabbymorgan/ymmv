@@ -65,11 +65,13 @@ class FormComponent extends Component {
           <Form autocomplete="off" onSubmit={this.handleSubmit.bind(this)}>
             {
               Object.keys(contract).map(fieldName => {
-                if (!contract[fieldName].inputType) return null;
+                let field = contract[fieldName];
+                if (Array.isArray(field)) field = { ...field[0], isArray: true };
+                const { search, inputType, isArray } = field;
+                if (!inputType) return null;
                 const Element = inputComponents[docType][fieldName];
                 const valid = this.state[fieldName] && !this.props[fieldName + 'Error'];
                 const invalid = !valid && this.state[fieldName];
-                const { search } = contract[fieldName];
                 return (
                   <DataInputGroup key={docType + '_' + fieldName}>
                     <Label for={fieldName}>{fieldName.split(/(?=[A-Z])/).join(' ').toLowerCase()}</Label>
@@ -79,21 +81,22 @@ class FormComponent extends Component {
                       invalid={invalid}
                       key={fieldName}
                       name={fieldName}
-                      onChange={this.handleChange.bind(this)}
+                      onChange={(e) => this.handleChange(e) }
                     />
                     {
                       search
                         ? <AutoComplete
-                            fieldName={fieldName}
-                            collection={search.collection}
-                            subField={search.subField}
-                            string={this.state[fieldName]}
-                            handleSelect={this.handleSelect.bind(this)}
-                          />
+                          fieldName={fieldName}
+                          collection={search.collection}
+                          subField={search.subField}
+                          string={this.state[fieldName]}
+                          handleSelect={this.handleSelect.bind(this)}
+                        />
                         : null
                     }
                     <FormFeedback valid>Good to go!</FormFeedback>
                     <FormFeedback invalid>{this.state[fieldName + 'Error']}</FormFeedback>
+                    <FormText>{isArray ? 'Please use commas to separate.' : ''}</FormText>
                   </DataInputGroup>
                 )
               })
