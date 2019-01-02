@@ -63,7 +63,7 @@ class SearchBar extends Component {
 }
 
 const mapStateToProps = state => ({
-  isLoggedIn: state.user.isLoggedIn,
+  isLoggedIn: state.session.isLoggedIn,
 });
 
 export default connect(mapStateToProps, { searchProducts })(SearchBar);

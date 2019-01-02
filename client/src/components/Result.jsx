@@ -8,16 +8,23 @@ const Result = (props) => {
     name,
     companyName,
     description,
-    imgUrl,
+    imageUrl,
+    ratingIds,
     _id,
   } = props.product;
+  console.log(props.product);
 
   return (
-    <ResultContainer>
+    <ResultContainer xs="12" md="4">
       <Card>
-        <CardImg top width="100%" src={imgUrl || process.env.REACT_APP_DEFAULT_IMAGE_URL} alt="Card image cap" />
+        <CardImg top width="100%" src={imageUrl} alt="Card image" />
         <CardBody>
-          <Link to={`/product/${_id}`}>
+          <Link to={{
+            pathname: `/product/${_id}`,
+            state: {
+              product: props.product
+            }
+          }}>
             <CardTitle>{name}</CardTitle>
           </Link>
           <CardSubtitle>{companyName}</CardSubtitle>

@@ -104,7 +104,7 @@ export const Label = styled(BSLabel)`
   margin: 1rem 0 0 0;
 `;
 
-export const ResultContainer = styled.div`
+export const ResultContainer = styled(Col)`
 `
 
 export const Card = styled(BSCard)`

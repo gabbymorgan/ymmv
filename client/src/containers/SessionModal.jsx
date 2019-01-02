@@ -94,7 +94,7 @@ const ModalSelector = (props) => {
 const mapStateToProps = (state) => {
   return {
     showingSessionModal: state.modals.showingSessionModal,
-    isLoggedIn: state.user.isLoggedIn,
+    isLoggedIn: state.session.isLoggedIn,
   }
 }
 

@@ -37,7 +37,7 @@ class UserNav extends React.Component {
 
         <Navbar color="light" light expand="md">
           <Link to="/">
-            <div className="navbar-brand">your mileage may vary</div>
+            <div className="navbar-brand">ymmv</div>
           </Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>

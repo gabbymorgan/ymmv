@@ -21,8 +21,8 @@ mongoose
       const randomDimenion = () => Math.trunc(Math.random() * 100) * 10;
       const randomWidth = randomDimenion();
       const randomHeight = randomDimenion();
-      const imgUrl = `https://picsum.photos/${randomWidth}/${randomHeight}`
-      fixedProduct = Object.assign(product, { description: truncatedDescription, imgUrl, company: company._id })
+      const imageUrl = `https://picsum.photos/${randomWidth}/${randomHeight}`
+      fixedProduct = Object.assign(product, { description: truncatedDescription, imageUrl, companyName: company.name })
       newProduct = new Product(product);
       await newProduct.save();
     });

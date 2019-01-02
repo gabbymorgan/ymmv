@@ -8,10 +8,14 @@ export default (state = defaultState, action) => {
       return {
         showingSessionModal: true,
       };
-    case actionTypes.HIDE_SESSION_MODAL:
+    case actionTypes.LOGIN.SUCCESS:
       return {
         showingSessionModal: false,
       };
+    case actionTypes.REGISTER.SUCCESS:
+      return {
+        showingSessionModal: false,
+      }
     default:
       return state;
   }

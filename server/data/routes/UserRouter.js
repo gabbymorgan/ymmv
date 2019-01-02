@@ -21,6 +21,7 @@ router
     newUser
       .save()
       .then((user) => {
+        req.session.userId = user._id;
         res.status(200).json(user);
       })
       .catch((err) => {

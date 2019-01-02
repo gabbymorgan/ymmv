@@ -6,14 +6,18 @@ import { ContentHeading } from '../styles';
 
 class MyProfile extends Component {
     render() {
+        const { profile } = this.props;
         return (
             <Row>
                 <Col>
                     <ContentHeading>
-                        {this.props.profile.email}
+                        <h1>{profile.firstName} {profile.lastName}</h1>
                     </ContentHeading>
                     <Row>
-                        {this.props.profile.description}
+                        <h4>{profile.email}</h4>
+                    </Row>
+                    <Row>
+                        <p>{profile.description}</p>
                     </Row>
                 </Col>
             </Row>
@@ -22,8 +26,8 @@ class MyProfile extends Component {
 }
 
 const mapStateToProps = state => ({
-    isLoggedIn: state.user.isLoggedIn,
-    profile: state.user.profile,
+    isLoggedIn: state.session.isLoggedIn,
+    profile: state.session.profile,
 });
 
 export default connect(mapStateToProps)(MyProfile);

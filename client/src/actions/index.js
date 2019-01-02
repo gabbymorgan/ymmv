@@ -1,5 +1,5 @@
 import { showSessionModal, hideSessionModal } from './modals';
-import { checkUsername, register, login, logout } from './user';
+import { checkUsername, register, login, logout } from './session';
 import { search_companies } from './companies';
 import { searchProducts, createProduct } from './products';
 import { searchReports } from './reports';

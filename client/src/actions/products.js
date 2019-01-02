@@ -7,6 +7,12 @@ axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 //TODO: MUST PAGINATE
 export const searchProducts = (queryType, string) => (dispatch) => {
   dispatch({ type: actionTypes.SEARCH_PRODUCTS.IN_PROGRESS });
+  if (!string) {
+    return dispatch({
+      type: actionTypes.SEARCH_PRODUCTS.SUCCESS,
+      searchResults: []
+    });
+  }
   return axios
     .get(`products?queryType=${queryType}&string=${string}`)
     .then(response => {

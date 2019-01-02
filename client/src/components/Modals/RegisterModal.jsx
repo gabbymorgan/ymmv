@@ -55,7 +55,15 @@ class RegisterModal extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const { email, username, password, passwordMatch, passwordLengthOK } = this.state;
+    const {
+      email,
+      password,
+      firstName,
+      lastName,
+      description,
+      passwordMatch,
+      passwordLengthOK
+    } = this.state;
     if (!passwordMatch) {
       // TODO: replace with nested modal
       alert('Passwords do not match');
@@ -64,21 +72,27 @@ class RegisterModal extends Component {
       // TODO: replace with nested modal
       alert('Password is too short.');
     }
-    this.props.register(email, username, password);
+    this.props.register({ email, password, firstName, lastName, description });
   }
 
   render() {
     return (
       <ModalBody>
       <Form onSubmit={this.handleSubmit.bind(this)}>
-        <Label to="email">Email</Label>
+        <Label to="email">Email*</Label>
         <Input name="email" onChange={this.inputHandler.bind(this)} />
-        <Label to="username">Username</Label>
+        <Label to="firstName">Last Name*</Label>
+        <Input name="firstName" onChange={this.inputHandler.bind(this)} />
+        <Label to="lastName">Last Name*</Label>
+        <Input name="lastName" onChange={this.inputHandler.bind(this)} />
+        <Label to="description">About Me</Label>
+        <Input type="textarea" name="description" onChange={this.inputHandler.bind(this)} />
+        {/* <Label to="username">Username</Label>
         <InputGroup>
           <InputGroupAddon addonType="prepend"><Button onClick={this.checkUsername.bind(this)}>Check Availability</Button></InputGroupAddon>
           <Input name="username" onChange={this.inputHandler.bind(this) } />
-        </InputGroup>
-        <Label to="password">Password/Confirm</Label>
+        </InputGroup> */}
+        <Label to="password">Password/Confirm*</Label>
         <Input type="password" name="password" onChange={this.inputHandler.bind(this)} />
         <Input type="password" name="confirmPassword" onChange={this.inputHandler.bind(this)} />
         <Button onClick={this.handleSubmit.bind(this)}>Sign Up</Button>
