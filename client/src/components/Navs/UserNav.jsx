@@ -48,11 +48,6 @@ class UserNav extends React.Component {
                 </Link>
               </NavItem>
               <NavItem>
-                <Link to='/contact'>
-                    <div className="nav-link">Contact</div>
-                </Link>
-              </NavItem>
-              <NavItem>
                 <Link to='/me'>
                     <div className="nav-link">Profile</div>
                 </Link>

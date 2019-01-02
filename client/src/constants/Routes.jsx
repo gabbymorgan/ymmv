@@ -12,7 +12,6 @@ export default () => {
       <Route path='/me' component={ MyProfile } />
       <Route path='/product/:productId' component={Product} />
       <Route path='/about' component={About} />
-      <Route path='/contact' component={Contact} />
       {
         Object.keys(FormComponents).map(componentName => {
           const Component = FormComponents[componentName];
