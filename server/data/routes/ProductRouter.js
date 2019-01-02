@@ -18,12 +18,13 @@ router
       }).catch(err => res.status(500).json({ message: err.message }));
   })
   .post('/', (req, res) => {
-    const { name, companyName, description, ingredients } = req.body;
+    const { name, companyName, description, ingredients, imageUrl } = req.body;
     const newProduct = new Product({
       name,
       companyName,
       description,
       ingredients,
+      imageUrl,
     });
     newProduct.save()
       .then(savedProduct => {

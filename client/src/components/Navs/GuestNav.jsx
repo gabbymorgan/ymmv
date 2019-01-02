@@ -50,11 +50,6 @@ class GuestNav extends React.Component {
                 </Link>
               </NavItem>
               <NavItem>
-                <Link to='/contact'>
-                    <div className="nav-link">Contact</div>
-                </Link>
-              </NavItem>
-              <NavItem>
                 <Link to='/'>
                     <div className="nav-link" onClick={() => this.showModal() }>Sign In/Up</div>
                 </Link>
