@@ -3,6 +3,8 @@ const actionTypes = {
   LOGOUT: 'LOGOUT',
   SHOW_SESSION_MODAL: 'SHOW_SESSION_MODAL',
   HIDE_SESSION_MODAL: 'HIDE_SESSION_MODAL',
+  SHOW_FORM_MODAL: 'SHOW_FORM_MODAL',
+  HIDE_FORM_MODAL: 'HIDE_FORM_MODAL',
   REGISTER: {},
   GET_USERS: {},
   SEARCH_PRODUCTS: {},
@@ -10,7 +12,7 @@ const actionTypes = {
   SEARCH_REPORTS: {},
   CREATE_REPORT: {},
   UPDATE_REPORT: {},
-  SEARCH_COMPANIES: {},
+  SEARCH_COMPANY: {},
 };
 
 Object.keys(actionTypes).forEach(type => {

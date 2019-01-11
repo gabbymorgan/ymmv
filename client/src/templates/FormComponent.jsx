@@ -51,6 +51,7 @@ class FormComponent extends Component {
     Object.keys(this.state).forEach(key => {
       document[key] = this.state[key];
     });
+    console.log({actionBase, document, docType: this.props.docType})
     this.props[actionBase + this.props.docType](document);
   };
 
@@ -62,7 +63,7 @@ class FormComponent extends Component {
     return (
       <Col xs="6">
         <Row>
-          <Form autocomplete="off" onSubmit={this.handleSubmit.bind(this)}>
+          <Form autoComplete="off" onSubmit={this.handleSubmit.bind(this)}>
             {
               Object.keys(contract).map(fieldName => {
                 let field = contract[fieldName];

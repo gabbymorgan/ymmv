@@ -35,7 +35,6 @@ export const createProduct = (product) => (dispatch) => {
     .then(response => {
       dispatch({
         type: actionTypes.CREATE_PRODUCT.SUCCESS,
-        searchResults: response.data
       });
     }).catch(error => {
       dispatch({

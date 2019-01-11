@@ -10,3 +10,11 @@ export const showSessionModal = () => dispatch => {
 export const hideSessionModal = () => dispatch => {
   dispatch({ type: actionTypes.HIDE_SESSION_MODAL });
 }
+
+export const showFormModal = (formModalType) => dispatch => {
+  dispatch({ type: actionTypes.SHOW_FORM_MODAL, formModalType });
+}
+
+export const hideFormModal = () => dispatch => {
+  dispatch({ type: actionTypes.HIDE_FORM_MODAL });
+}

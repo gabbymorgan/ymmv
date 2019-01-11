@@ -6,12 +6,12 @@ const defaultState = {
 
 export default (state = defaultState, action) => {
   switch (action.type) {
-    case actionTypes.SEARCH_COMPANIES.IN_PROGRESS:
+    case actionTypes.SEARCH_COMPANY.IN_PROGRESS:
       return {
         ...state,
         inProgress: true,
       }
-    case actionTypes.SEARCH_COMPANIES.SUCCESS:
+    case actionTypes.SEARCH_COMPANY.SUCCESS:
       return {
         ...state,
         inProgress: false,

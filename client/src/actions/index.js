@@ -1,20 +1,23 @@
-import { showSessionModal, hideSessionModal } from './modals';
+import { showSessionModal, hideSessionModal, showFormModal, hideFormModal } from './modal';
 import { checkUsername, register, login, logout } from './session';
-import { search_companies } from './companies';
-import { searchProducts, createProduct } from './products';
-import { searchReports } from './reports';
+import { searchCompany, createCompany } from './company';
+import { searchProducts, createProduct } from './product';
+import { searchReports } from './report';
 
 export {
   // MODALS
   showSessionModal,
   hideSessionModal,
+  showFormModal,
+  hideFormModal,
   // USER
   checkUsername,
   register,
   login,
   logout,
-  // COMPANIES
-  search_companies,
+  // COMPANY
+  searchCompany,
+  createCompany,
   // PRODUCTS
   searchProducts,
   createProduct,

@@ -14,8 +14,8 @@ mongoose
   .connect(dbUrl)
   .then(async () => {
     console.log('\n=== Connected to MongoDB ===\n');
-    const companies = await Company.find().limit(products.length);
-    const loadCompanies = companies.map(async (company, index) => {
+    const company = await Company.find().limit(products.length);
+    const loadCompany = company.map(async (company, index) => {
       const product = products[index];
       const truncatedDescription = product.description.slice(0, 255);
       const randomDimenion = () => Math.trunc(Math.random() * 100) * 10;
@@ -26,7 +26,7 @@ mongoose
       newProduct = new Product(product);
       await newProduct.save();
     });
-    await Promise.all(loadCompanies);
+    await Promise.all(loadCompany);
     mongoose.disconnect();
   })
   .catch(err => console.log('database conection failed', err));

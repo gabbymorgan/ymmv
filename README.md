@@ -5,7 +5,7 @@ YMMV is an app that takes into account the various, disorganized ways that peopl
 - MERN
 - Redux
 - User/Company/Product/Report/Rating
-- People report products by companies, and reports compile into ratings
+- People report products by company, and reports compile into ratings
 - Session httpOnly (passport)
 - Email confirm
 - Deploy full stack on Heroku (connect to Github)

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Sensitivity = require('./Sensitivity');
 const Rating = require('./Rating');
-const ReportContract = require('../contracts/ReportContract');
+const ReportContract = require('../contracts/Report');
 
 const ReportSchema = new mongoose.Schema(ReportContract);
 

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const User = require('./User');
-const SensitivityContract = require('../contracts/SensitivityContract');
+const SensitivityContract = require('../contracts/Sensitivity');
 
 const SensitivitySchema = new mongoose.Schema(SensitivityContract);
 

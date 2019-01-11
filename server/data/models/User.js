@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-const UserContract = require('../contracts/UserContract');
+const UserContract = require('../contracts/User');
 
 const UserSchema = new mongoose.Schema(UserContract);
 

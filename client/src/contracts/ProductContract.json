@@ -13,7 +13,7 @@
         "maxLength": 128,
         "inputType": "text",
         "search": {
-            "collection": "companies",
+            "collection": "Company",
             "subField": "name"
         }
     },

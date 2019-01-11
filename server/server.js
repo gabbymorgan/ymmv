@@ -9,11 +9,11 @@ const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
 
 // local files
-const UserRouter = require('./data/routes/UserRouter');
-const ProductRouter = require('./data/routes/ProductRouter');
-const ReportRouter = require('./data/routes/ReportRouter');
-const CompanyRouter = require('./data/routes/CompanyRouter');
-const SensitivityRouter = require('./data/routes/SensitvityRouter');
+const UserRouter = require('./data/routes/User');
+const ProductRouter = require('./data/routes/Product');
+const ReportRouter = require('./data/routes/Report');
+const CompanyRouter = require('./data/routes/Company');
+const SensitivityRouter = require('./data/routes/Sensitivity');
 
 const server = express();
 
@@ -59,7 +59,7 @@ server.use(passport.session());
 // routes begin
 server.use('/api/users', UserRouter);
 server.use('/api/products', ProductRouter);
-server.use('/api/companies', CompanyRouter);
+server.use('/api/company', CompanyRouter);
 server.use('/api/reports', ReportRouter);
 server.use('/api/sensitivities', SensitivityRouter);
 // routes end

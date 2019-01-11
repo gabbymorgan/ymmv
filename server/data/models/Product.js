@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Company = require('./Company');
 
-const ProductContract = require('../contracts/ProductContract');
+const ProductContract = require('../contracts/Product');
 
 const ProductSchema = new mongoose.Schema(ProductContract);
 
