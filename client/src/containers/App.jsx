@@ -4,7 +4,7 @@ import { Container } from '../styles';
 import { Routes } from '../constants';
 import { Nav, SessionModal } from '../containers';
 import './App.css';
-import FormModal from './FormModal';
+import FormModal from '../templates/FormModal';
 
 class App extends Component {
   render() {

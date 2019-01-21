@@ -9,6 +9,11 @@ export default (state = defaultState, action) => {
         ...state,
         showingSessionModal: true,
       };
+    case actionTypes.HIDE_SESSION_MODAL:
+      return {
+        ...state,
+        showingSessionModal: false,
+      }
     case actionTypes.LOGIN.SUCCESS:
       return {
         ...state,

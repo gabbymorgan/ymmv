@@ -30,7 +30,7 @@ class SessionModal extends React.Component {
     })
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     if (!prevProps.isLoggedIn && this.props.isLoggedIn) {
       this.props.hideSessionModal();
     }
@@ -47,7 +47,7 @@ class SessionModal extends React.Component {
     });
   }
 
-  toggleAll() {
+  toggleAll() { 
     this.setState({
       nestedModal: !this.state.nestedModal,
       closeAll: true

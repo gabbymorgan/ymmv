@@ -6,9 +6,9 @@ import { UserNav, GuestNav } from '../components';
 class NavContainer extends Component {
   render() {
     if (this.props.isLoggedIn) {
-      return <UserNav />;
+      return <UserNav />
     }
-    return <GuestNav />;
+    return <GuestNav />
   }
 }
 
