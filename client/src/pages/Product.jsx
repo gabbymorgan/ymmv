@@ -26,7 +26,16 @@ class Product extends React.Component {
           <p><strong>Ingredients: </strong>{product.ingredients.join(', ')}</p>
         </Row>
         <Row>
-          <p><strong>Ratings: </strong>{product.ratings}</p>
+          <p><strong>Ratings: </strong></p>
+          {product.ratingIds.map(rating => {
+            return (
+              <div key={rating._id}>
+                <h1>allergen: {rating.allergen}</h1>
+                <p>light: {rating.light}</p>
+                <p>moderate: {rating.moderate}</p>
+              </div>
+            )
+          })}
         </Row>
       </Col>
     );

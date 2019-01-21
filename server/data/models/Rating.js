@@ -9,7 +9,7 @@ RatingSchema.pre('save', async function () {
     const product = await Product.findById(this.productId);
     await product.update({
         $push: {
-            ratings: this._id,
+            ratingIds: this._id,
         }
     });
 });
