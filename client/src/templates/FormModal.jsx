@@ -4,9 +4,13 @@ import { connect } from 'react-redux';
 import { Modal, ModalHeader } from '../styles';
 import * as FormComponents from '../components/FormComponents';
 
+const FormComponent = () => {
+  const Form = FormComponents[this.props.formModalType] || null;
+  return Form;
+}
+
 class SessionModal extends React.Component {
   render() {
-    const FormComponent = FormComponents[this.props.formModalType];
     const { formModalType } = this.props;
     return (
       <Modal isOpen={this.props.showingFormModal} toggle={this.toggle}>

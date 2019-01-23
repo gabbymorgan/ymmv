@@ -6,7 +6,7 @@ module.exports = {
   companyName: { type: String, maxLength: 128, required: true, inputType: 'text', search: { collection: 'Company', subField: 'name' } },
   description: { type: String, required: true, maxlength: 256, inputType: 'textarea' },
   ingredients: [{ type: String, maxlength: 64, inputType: 'text' }],
-  ratingIds: { type: mongoose.Schema.Types.ObjectId, ref: 'Rating' },
+  ratingIds: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Rating' }],
   imageUrl: {
       type: String,
       validate: {

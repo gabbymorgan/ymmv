@@ -1,12 +1,21 @@
 import React from 'react';
+import { Table, Tooltip } from 'reactstrap';
+
 import { Row, Col } from '../styles';
 
 class Product extends React.Component {
   state = {}
 
+  toggle(id) {
+    const toggled = !this.state[id];
+    console.log(id, toggled);
+    this.setState({
+      [id]: toggled,
+    })
+  }
+
   render() {
     const { product } = this.props.location.state;
-    console.log(product);
     if (!product) return <div></div>
     return (
       <Col xs="12" md="6">
@@ -26,16 +35,33 @@ class Product extends React.Component {
           <p><strong>Ingredients: </strong>{product.ingredients.join(', ')}</p>
         </Row>
         <Row>
-          <p><strong>Ratings: </strong></p>
-          {product.ratingIds.map(rating => {
-            return (
-              <div key={rating._id}>
-                <h1>allergen: {rating.allergen}</h1>
-                <p>light: {rating.light}</p>
-                <p>moderate: {rating.moderate}</p>
-              </div>
-            )
-          })}
+          <p><strong>Average Reaction Level: </strong></p>
+          <Table>
+            <thead>
+              <tr>
+                <th>Allergen</th>
+                <th>Light</th>
+                <th>Moderate</th>
+              </tr>
+            </thead>
+            <tbody>
+              {product.ratingIds ? product.ratingIds.map(rating => {
+                const id = rating._id;
+                return (
+                  <tr key={id}>
+                    <td>{rating.allergen}</td>
+                    <td id={"light" + id}>{rating.light.average}</td>
+                    <Tooltip placement="right" isOpen={this.state["light" + id]} target={"light" + id} toggle={() => this.toggle("light" +id) }>
+                      {rating.light.sampleSize} reports
+                    </Tooltip>
+                    <td id={"moderate" + id}>{rating.moderate.average}</td>
+                    <Tooltip placement="right" isOpen={this.state["moderate" + id]} target={"moderate" + id} toggle={() => this.toggle("moderate" + id) }>
+                      {rating.moderate.sampleSize} reports
+                    </Tooltip>                  </tr>
+                )
+              }) : null}
+            </tbody>
+          </Table>
         </Row>
       </Col>
     );

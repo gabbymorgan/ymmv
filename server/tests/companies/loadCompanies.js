@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const Company = require('../../data/models/Company');
 
-const company = JSON.parse(fs.readFileSync('./server/tests/company/company.json'));
+const company = JSON.parse(fs.readFileSync('./server/tests/companies/companies.json'));
 const dbUrl = process.env.NODE_ENV === 'production'
   // need new DB URL for project
   ? ``

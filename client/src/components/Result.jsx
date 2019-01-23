@@ -12,7 +12,7 @@ const Result = (props) => {
     ratingIds,
     _id,
   } = props.product;
-  console.log(props.product);
+  console.log(ratingIds);
 
   return (
     <ResultContainer xs="12" md="4">

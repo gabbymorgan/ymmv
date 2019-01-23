@@ -28,7 +28,7 @@
     "heroku-postbuild": "cd client && npm install && npm run build",
     "test": "mocha tests/*.test.js",
     "lint": "eslint",
-    "loadCompany": "node server/tests/company/loadCompany.js",
+    "loadCompanies": "node server/tests/companies/loadCompanies.js",
     "loadProducts": "node server/tests/products/loadProducts.js",
     "loadUsers": "node server/tests/users/loadUsers.js",
     "loadSensitivities": "node server/tests/sensitivities/loadSensitivities.js",
