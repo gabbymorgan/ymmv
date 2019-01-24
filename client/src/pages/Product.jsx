@@ -8,7 +8,6 @@ class Product extends React.Component {
 
   toggle(id) {
     const toggled = !this.state[id];
-    console.log(id, toggled);
     this.setState({
       [id]: toggled,
     })
@@ -51,13 +50,14 @@ class Product extends React.Component {
                   <tr key={id}>
                     <td>{rating.allergen}</td>
                     <td id={"light" + id}>{rating.light.average}</td>
-                    <Tooltip placement="right" isOpen={this.state["light" + id]} target={"light" + id} toggle={() => this.toggle("light" +id) }>
+                    <Tooltip placement="right" isOpen={this.state["light" + id]} target={"light" + id} toggle={() => this.toggle("light" + id)}>
                       {rating.light.sampleSize} reports
                     </Tooltip>
                     <td id={"moderate" + id}>{rating.moderate.average}</td>
-                    <Tooltip placement="right" isOpen={this.state["moderate" + id]} target={"moderate" + id} toggle={() => this.toggle("moderate" + id) }>
+                    <Tooltip placement="right" isOpen={this.state["moderate" + id]} target={"moderate" + id} toggle={() => this.toggle("moderate" + id)}>
                       {rating.moderate.sampleSize} reports
-                    </Tooltip>                  </tr>
+                    </Tooltip>
+                  </tr>
                 )
               }) : null}
             </tbody>

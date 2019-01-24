@@ -12,7 +12,9 @@ const actionTypes = {
   SEARCH_REPORTS: {},
   CREATE_REPORT: {},
   UPDATE_REPORT: {},
-  SEARCH_COMPANY: {},
+  SEARCH_COMPANIES: {},
+  CREATE_COMPANY: {},
+  UPDATE_COMPANY: {},
 };
 
 Object.keys(actionTypes).forEach(type => {

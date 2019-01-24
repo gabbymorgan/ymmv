@@ -1,23 +1,31 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { Modal, ModalHeader } from '../styles';
+import { Modal, ModalHeader, ModalBody } from '../styles';
 import * as FormComponents from '../components/FormComponents';
+import * as actions from '../actions';
 
-const FormComponent = () => {
-  const Form = FormComponents[this.props.formModalType] || null;
-  return Form;
+const { hideFormModal } = actions;
+
+const FormComponent = (props) => {
+  const Form = FormComponents[props.formModalType] || null;
+  return <Form />;
 }
 
-class SessionModal extends React.Component {
+class FormModal extends React.Component {
+  toggle() {
+    this.props.hideFormModal();
+  }
   render() {
     const { formModalType } = this.props;
     return (
-      <Modal isOpen={this.props.showingFormModal} toggle={this.toggle}>
-          <ModalHeader toggle={this.toggle}>
-            {formModalType}
-          </ModalHeader>
-        <FormComponent/>
+      <Modal isOpen={this.props.showingFormModal} toggle={this.toggle.bind(this)}>
+        <ModalHeader toggle={this.toggle.bind(this)}>
+          {formModalType}
+        </ModalHeader>
+        <ModalBody>
+          <FormComponent formModalType={this.props.formModalType} />
+        </ModalBody>
       </Modal>
     );
   }
@@ -30,4 +38,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(SessionModal);
+export default connect(mapStateToProps, { hideFormModal })(FormModal);

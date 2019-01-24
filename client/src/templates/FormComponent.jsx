@@ -51,8 +51,8 @@ class FormComponent extends Component {
     Object.keys(this.state).forEach(key => {
       document[key] = this.state[key];
     });
-    console.log({actionBase, document, docType: this.props.docType})
     this.props[actionBase + this.props.docType](document);
+    this.props.hideFormModal();
   };
 
   render() {
@@ -72,7 +72,7 @@ class FormComponent extends Component {
                 if (!inputType) return null;
                 const Element = inputComponents[docType][fieldName];
                 const valid = this.state[fieldName] && !this.props[fieldName + 'Error'];
-                const invalid = !valid && this.state[fieldName];
+                const invalid = !valid && this.state[fieldName] != null;
                 return (
                   <DataInputGroup key={docType + '_' + fieldName}>
                     <Label for={fieldName}>{fieldName.split(/(?=[A-Z])/).join(' ').toLowerCase()}</Label>
