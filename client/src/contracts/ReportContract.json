@@ -1,1 +1,0 @@
-{"productId":{"ref":"Product","required":true},"userId":{"ref":"User","required":true},"sensitivityIds":[{"ref":"Sensitivity","required":true}],"sensitivities":{},"details":{"maxlength":512,"inputType":"textarea"},"reactionLevel":{"max":5,"required":true,"inputType":"select"}}

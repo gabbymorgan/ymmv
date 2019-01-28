@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Row } from '../styles';
 import { Route } from 'react-router-dom';
 
-import { Main, MyProfile, Product, About, Contact } from '../pages';
-import { FormComponents } from '../components';
+import { Main, MyProfile, Product, About } from '../pages';
+import CreateProduct from '../components/Forms/CreateProduct';
 
 export default () => {
   return (
@@ -12,12 +12,7 @@ export default () => {
       <Route path='/me' component={ MyProfile } />
       <Route path='/product/:productId' component={Product} />
       <Route path='/about' component={About} />
-      {
-        Object.keys(FormComponents).map(componentName => {
-          const Component = FormComponents[componentName];
-          return <Route key={componentName} exact path={`/${componentName}`} component={Component} />
-        })
-      }
+      <Route path='/new/product' component={ CreateProduct } />
     </Row>
   );
 }
