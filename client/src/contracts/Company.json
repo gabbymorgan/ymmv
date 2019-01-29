@@ -1,0 +1,7 @@
+{
+  "name": { "maxLength": 128, "inputType": "text" },
+  "description": { "maxLength": 256, "inputType": "textarea" },
+  "email": { "inputType": "email" },
+  "url": { "validate": {} },
+  "productIds": [{ "ref": "Product" }]
+}

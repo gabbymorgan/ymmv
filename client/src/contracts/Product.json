@@ -1,0 +1,23 @@
+{
+  "name": {
+    "required": true,
+    "maxLength": 128,
+    "index": true,
+    "inputType": "text"
+  },
+  "companyId": { "ref": "Company" },
+  "companyName": {
+    "maxLength": 128,
+    "required": true,
+    "inputType": "text",
+    "search": { "collection": "Company", "subField": "name" }
+  },
+  "description": {
+    "required": true,
+    "maxlength": 256,
+    "inputType": "textarea"
+  },
+  "ingredients": [{ "maxlength": 64, "inputType": "text" }],
+  "ratingIds": [{ "ref": "Rating" }],
+  "imageUrl": { "validate": {}, "inputType": "url" }
+}

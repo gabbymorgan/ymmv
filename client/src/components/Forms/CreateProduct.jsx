@@ -1,9 +1,11 @@
+import proptypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { FormFeedback, FormText } from "reactstrap";
-import proptypes from "prop-types";
 
-import * as actions from "../../actions";
+import { createProduct } from "../../actions";
+import AutoComplete from "./AutoComplete";
+import { Product } from "../../contracts";
 import {
   Button,
   Label,
@@ -14,19 +16,34 @@ import {
   Input
 } from "../../styles";
 import * as validators from "../../constants/validators";
-import AutoComplete from "./AutoComplete";
 
 class FormComponent extends Component {
   state = {};
 
-  handleChange = async e => {
+  handleChange = e => {
     const { name, value } = e.target;
-    const validation = validators(name, value);
+    const warnings = this.validate(name, value);
     this.setState({
       [name]: value,
-      [name + "Error"]: validation.error
+      [name + "Warnings"]: warnings
     });
   };
+
+  validate(name, value) {
+    const { isShorterThan } = validators;
+    const productValidators = {
+      name() {
+        return [isShorterThan(value, 128, true)];
+      },
+      description() {
+        return [isShorterThan(value, 256, true)];
+      },
+      company() {
+        return [];
+      }
+    };
+    return productValidators[name]();
+  }
 
   handleSelect(fieldName, selectionName) {
     this.setState({
@@ -36,6 +53,7 @@ class FormComponent extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.createProduct(this.state);
   }
 
   render() {
@@ -43,12 +61,36 @@ class FormComponent extends Component {
       <Col xs="6">
         <Row>
           <Form autoComplete="off" onSubmit={this.handleSubmit.bind(this)}>
-            <Input valid={true} placeholder="suuuuhhh" />
+            <Label to="name" />
+            <Input
+              valid
+              name="name"
+              placeholder="name"
+              onChange={this.handleChange.bind(this)}
+            />
             <FormFeedback valid>Good to go!</FormFeedback>
-            <FormFeedback invalid>
-              {this.state.nameError}
-            </FormFeedback>
+            <FormFeedback invalid>{this.state.nameError}</FormFeedback>
+            <Label to="description" />
+            <Input
+              valid
+              name="description"
+              placeholder="description"
+              onChange={this.handleChange.bind(this)}
+            />
+            <FormFeedback valid>Good to go!</FormFeedback>
+            <FormFeedback invalid>{this.state.descriptionError}</FormFeedback>
             <Button>Submit</Button>
+            <Label to="company" />
+            <Input name="company" onChange={this.handleChange.bind(this)} />
+            <AutoComplete
+              collection="Company"
+              string={this.state.company}
+              fieldName="company"
+              subField="name"
+              handleSelect={this.handleSelect.bind(this)}
+            />
+            <FormFeedback valid>Good to go!</FormFeedback>
+            <FormFeedback invalid>{this.state.nameError}</FormFeedback>
           </Form>
         </Row>
       </Col>
@@ -57,14 +99,14 @@ class FormComponent extends Component {
 }
 
 FormComponent.proptypes = {
-  searchResults: proptypes.arrayOf(proptypes.string),
+  searchResults: proptypes.arrayOf(proptypes.string)
 };
 
 const mapStateToProps = state => ({
-  searchResults: state.companies.searchResults
+  searchResults: state.company.searchResults
 });
 
 export default connect(
   mapStateToProps,
-  { ...actions }
+  { createProduct }
 )(FormComponent);

@@ -50,7 +50,7 @@ class SearchBar extends Component {
           {
             this.props.isLoggedIn
               ? (
-                <Link to="/CreateProduct">
+                <Link to="/new/product">
                   <FaPlusCircle size="30" color="gray" style={{ margin: "1rem" }} />
                 </Link>
               )

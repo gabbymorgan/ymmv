@@ -1,10 +1,21 @@
-export {GuestNav} from './Navs/GuestNav';
-export {UserNav} from './Navs/UserNav';
-export {LoginModal} from './Modals/LoginModal';
-export {RegisterModal} from './Modals/RegisterModal';
-export {FormModal} from './Modals/FormModal';
-export {SearchBar} from './SearchBar';
-export {Result} from './Result';
-export {CreateCompany} from './Forms/CreateCompany';
-export {CreateProduct} from './Forms/CreateProduct';
+import GuestNav from './Navs/GuestNav';
+import UserNav from './Navs/UserNav';
+import LoginModal from './Modals/LoginModal';
+import RegisterModal from './Modals/RegisterModal';
+import FormModal from './Modals/FormModal';
+import SearchBar from './SearchBar';
+import Result from './Result';
+import CreateCompany from './Forms/CreateCompany';
+import CreateProduct from './Forms/CreateProduct';
 
+export {
+  GuestNav,
+  UserNav,
+  LoginModal,
+  RegisterModal,
+  FormModal,
+  SearchBar,
+  Result,
+  CreateCompany,
+  CreateProduct,
+}
