@@ -6,7 +6,7 @@ import proptypes from 'prop-types';
 import * as actions from '../actions';
 import { Button, Label, Row, Form, Col, DataInputGroup } from '../styles';
 import * as contracts from '../contracts';
-import * as validators from '../contracts/validators';
+import * as validators from '../constants/validators';
 import * as inputComponents from '../styles/inputComponents';
 import AutoComplete from './AutoComplete';
 
