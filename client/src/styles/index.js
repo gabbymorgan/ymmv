@@ -47,6 +47,9 @@ export const ModalHeader = styled(BSModalHeader)`
 
 export const ModalBody = styled(BSModalBody)`
   background: ${colors.white};
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 `;
 
 export const ModalFooter = styled(BSModalFooter)`
@@ -59,6 +62,7 @@ export const Button = styled(BSButton)`
 `;
 
 export const Form = styled(BSForm)`
+  width: 100%;
 `;
 
 export const SearchBarRow = styled(BSRow)`
@@ -75,13 +79,14 @@ export const SearchForm = styled(BSForm)`
   width: 50%;
 `;
 
-export const Input = styled(BSInput)`
-`;
 
 export const DataInputGroup = styled(BSInputGroup)`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 `;
 
-export const DataInput = styled(BSInput)`
+export const Input = styled(BSInput)`
   margin: 1rem 0 0 0;
 `;
 
@@ -125,14 +130,13 @@ export const ContentHeading = styled(BSRow)`
   text-align: center;
 `;
 
-export const AutoCompleteContainer = styled.div`
-  width: 73%;
+export const AutoCompleteContainer = styled(Col)`
   border: solid 1px gray;
   background: white;
   position: absolute;
   z-index: 5;
   top: 3rem;
-  left: 27%;
+  width: 91.6%;
 `;
 
 export const AutoCompleteItem = styled.div`

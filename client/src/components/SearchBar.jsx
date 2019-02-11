@@ -1,28 +1,43 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { FaPlusCircle } from 'react-icons/fa';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { FaPlusCircle } from "react-icons/fa";
+import { Tooltip } from "reactstrap";
 
-import { searchProducts } from '../actions';
-import { SearchBarRow, SearchInput, SearchForm, Button, Link, ButtonGroup } from '../styles';
+import { searchProducts } from "../actions";
+import {
+  SearchBarRow,
+  SearchInput,
+  SearchForm,
+  Button,
+  Link,
+  ButtonGroup
+} from "../styles";
 
 class SearchBar extends Component {
   state = {
-    queryType: 'name',
-    string: '',
-  }
+    queryType: "name",
+    string: "",
+    tooltipOpen: false,
+  };
 
   handleQueryString({ target }) {
     this.props.searchProducts(this.state.queryType, target.value);
     this.setState({
-      string: target.value,
-    })
+      string: target.value
+    });
   }
 
   handleQueryType(queryType) {
     this.setState({
-      queryType,
+      queryType
     });
     this.props.searchProducts(queryType, this.state.string);
+  }
+
+  toggle() {
+    this.setState({
+      tooltipOpen: !this.state.tooltipOpen
+    });
   }
 
   render() {
@@ -38,24 +53,37 @@ class SearchBar extends Component {
           <ButtonGroup>
             <Button
               color="primary"
-              active={this.state.queryType === 'name'}
-              onClick={() => this.handleQueryType('name')}
-            >Product Name</Button>
+              active={this.state.queryType === "name"}
+              onClick={() => this.handleQueryType("name")}
+            >
+              Product Name
+            </Button>
             <Button
               color="primary"
-              active={this.state.queryType === 'companyName'}
-              onClick={() => this.handleQueryType('companyName')}
-            >Company Name</Button>
+              active={this.state.queryType === "companyName"}
+              onClick={() => this.handleQueryType("companyName")}
+            >
+              Company Name
+            </Button>
           </ButtonGroup>
-          {
-            this.props.isLoggedIn
-              ? (
-                <Link to="/CreateProduct">
-                  <FaPlusCircle size="30" color="gray" style={{ margin: "1rem" }} />
-                </Link>
-              )
-              : null
-          }
+          {this.props.isLoggedIn ? (
+            <Link to="/CreateProduct">
+              <FaPlusCircle
+                size="30"
+                color="gray"
+                style={{ marginLeft: "1rem", marginTop: "2rem" }}
+                id="AddProduct"
+              />
+              <Tooltip
+                placement="right"
+                isOpen={this.state.tooltipOpen}
+                target="AddProduct"
+                toggle={this.toggle.bind(this)}
+              >
+                Add New Product
+              </Tooltip>
+            </Link>
+          ) : null}
         </SearchForm>
       </SearchBarRow>
     );
@@ -63,7 +91,10 @@ class SearchBar extends Component {
 }
 
 const mapStateToProps = state => ({
-  isLoggedIn: state.session.isLoggedIn,
+  isLoggedIn: state.session.isLoggedIn
 });
 
-export default connect(mapStateToProps, { searchProducts })(SearchBar);
+export default connect(
+  mapStateToProps,
+  { searchProducts }
+)(SearchBar);

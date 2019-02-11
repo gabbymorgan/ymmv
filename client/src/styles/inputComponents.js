@@ -1,67 +1,68 @@
 import styled from 'styled-components';
 
-import {DataInput} from './';
+import {Input} from './';
 
 export const Company = {};
 
-Company.name = styled(DataInput)`
+Company.name = styled(Input)`
 `;
 
-Company.description = styled(DataInput)`
+Company.description = styled(Input)`
 `;
 
-Company.email = styled(DataInput)`
+Company.email = styled(Input)`
 `;
 
 export const Product = {};
 
-Product.name = styled(DataInput)`
+Product.name = styled(Input)`
+  
 `;
 
-Product.companyName = styled(DataInput)`
+Product.companyName = styled(Input)`
 `;
 
-Product.description = styled(DataInput)`
+Product.description = styled(Input)`
 `;
 
-Product.ingredients = styled(DataInput)`
+Product.ingredients = styled(Input)`
 `;
 
-Product.imageUrl = styled(DataInput)`
+Product.imageUrl = styled(Input)`
 `;
 
 export const Rating = {};
 
 export const Report = {};
 
-Report.details = styled(DataInput)`
+Report.details = styled(Input)`
 `;
 
-Report.reactionLevel = styled(DataInput)`
+Report.reactionLevel = styled(Input)`
 `;
 
 export const Sensitivity = {};
 
-Sensitivity.allergen = styled(DataInput)`
+Sensitivity.allergen = styled(Input)`
 `;
 
-Sensitivity.sensitivityLevel = styled(DataInput)`
+Sensitivity.sensitivityLevel = styled(Input)`
 `;
 
 export const User = {};
 
-User.firstName = styled(DataInput)`
+User.firstName = styled(Input)`
 `;
 
-User.lastName = styled(DataInput)`
+User.lastName = styled(Input)`
 `;
 
-User.email = styled(DataInput)`
+User.email = styled(Input)`
 `;
 
-User.description = styled(DataInput)`
+User.description = styled(Input)`
 `;
 
-User.password = styled(DataInput)`
+User.password = styled(Input)`
 `;
 

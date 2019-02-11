@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { Modal, ModalHeader, ModalBody } from '../styles';
-import * as FormComponents from '../components/FormComponents';
+import * as FormComponents from '../components/Forms/FormComponents';
 import * as actions from '../actions';
 
 const { hideFormModal } = actions;

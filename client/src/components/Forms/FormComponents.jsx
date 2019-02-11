@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FormComponent from '../templates/FormComponent';
+import FormComponent from '../../templates/FormComponent';
 
 export const CreateProduct = () => (
   <FormComponent docType="Product" isNew />

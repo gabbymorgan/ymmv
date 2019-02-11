@@ -4,7 +4,7 @@ import LoginModal from './Modals/LoginModal';
 import RegisterModal from './Modals/RegisterModal';
 import SearchBar from './SearchBar';
 import Result from './Result';
-import * as FormComponents from '../components/FormComponents';
+import * as FormComponents from './Forms/FormComponents';
 
 export {
   GuestNav,
